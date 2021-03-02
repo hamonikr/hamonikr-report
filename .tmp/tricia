@@ -1,0 +1,1012 @@
+Package: apturl
+Format: 3.0 (native)
+Binary: apturl-common, apturl, apturl-kde
+Architecture: all
+Version: 0.5.2+linuxmint8
+Maintainer: Linux Mint <root@linuxmint.com>
+Standards-Version: 3.9.3
+Build-Depends: debhelper (>= 9), intltool, python3-dev, python3-distutils-extra
+Package-List:
+ apturl deb admin optional arch=all
+ apturl-common deb admin optional arch=all
+ apturl-kde deb admin optional arch=all
+Priority: optional
+Section: admin
+Directory: pool/upstream/a/apturl
+Files: 
+ 6bb888d6a8bfdf667d6792c50e37817e 698 apturl_0.5.2+linuxmint8.dsc
+ 885b690e7aba70f817a8dcea20bdad76 83184 apturl_0.5.2+linuxmint8.tar.xz
+Checksums-Sha1: 
+ 6c6b20346da4d32f3750777b394452a38407df67 698 apturl_0.5.2+linuxmint8.dsc
+ 7bde6539fc471a155064037824daa73d3c7f8f42 83184 apturl_0.5.2+linuxmint8.tar.xz
+Checksums-Sha256: 
+ 6b3fe9e1785d0660cb83e097c9e4481985ae814debca17f5a16280500b9e1eab 698 apturl_0.5.2+linuxmint8.dsc
+ 185058191b827dc01fdcb611301e73e97168caf1d6874e388efcd7532edf5a73 83184 apturl_0.5.2+linuxmint8.tar.xz
+
+Package: base-files
+Format: 3.0 (native)
+Binary: base-files, lsb-release-udeb
+Architecture: any all
+Version: 19.3.0
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Standards-Version: 4.1.3
+Build-Depends: debhelper (>= 9), dh-systemd
+Package-List:
+ base-files deb admin required arch=any essential=yes
+ lsb-release-udeb udeb debian-installer extra arch=all
+Priority: required
+Section: admin
+Directory: pool/upstream/b/base-files
+Files: 
+ b94a8811675a8a1347559482504c5c46 709 base-files_19.3.0.dsc
+ fe7a2c014a8407fbf459daa0e656128b 76716 base-files_19.3.0.tar.xz
+Checksums-Sha1: 
+ 93a302cfd388732ebe111c0960ce4a33737e0ec7 709 base-files_19.3.0.dsc
+ 68169b0a98128d1ab18a830ad034658a5982a0a0 76716 base-files_19.3.0.tar.xz
+Checksums-Sha256: 
+ 1f06c5e023a8d54e7142b4aeca04dbe595a1cc8ecf80681a485bcbffa1d54263 709 base-files_19.3.0.dsc
+ 20c8391470ff6d99445b2bde8c1369e9e3c04b08686fa98cb2f00ec2c962adff 76716 base-files_19.3.0.tar.xz
+Original-Maintainer: Santiago Vila <sanvila@debian.org>
+
+Package: caja
+Format: 3.0 (native)
+Binary: caja, caja-common, libcaja-extension1, libcaja-extension-dev, libcaja-extension-doc, gir1.2-caja-2.0, gir1.2-caja
+Architecture: any all
+Version: 1.22.2-2+tricia
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Uploaders: John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>, Stefano Karapetsas <stefano@karapetsas.com>, Mike Gabriel <sunweaver@debian.org>, Vangelis Mouhtsis <vangelis@gnugr.org>,
+Homepage: http://www.mate-desktop.org/
+Standards-Version: 3.9.7
+Vcs-Browser: https://github.com/mate-desktop/debian-packages
+Vcs-Git: git://github.com/mate-desktop/debian-packages.git
+Build-Depends: debhelper (>= 11), dpkg-dev (>= 1.16.1.1), gobject-introspection, gtk-doc-tools, intltool, libdconf-dev, libexempi-dev, libexif-dev, libgail-3-dev, libgirepository1.0-dev, libglib2.0-dev, libgtk-3-dev, libmate-desktop-dev (>= 1.20), libnotify-dev, libpango1.0-dev, libselinux1-dev [linux-any], libstartup-notification0-dev, libx11-dev, libxml2-dev, mate-common (>= 1.20), quilt, shared-mime-info
+Package-List:
+ caja deb utils optional arch=any
+ caja-common deb utils optional arch=all
+ gir1.2-caja deb oldlibs optional arch=any
+ gir1.2-caja-2.0 deb introspection optional arch=any
+ libcaja-extension-dev deb libdevel optional arch=any
+ libcaja-extension-doc deb doc optional arch=all
+ libcaja-extension1 deb libs optional arch=any
+Priority: optional
+Section: utils
+Directory: pool/upstream/c/caja
+Files: 
+ 93c6792d1e506604b2252367df26c2d0 1692 caja_1.22.2-2+tricia.dsc
+ 8fc61839402a592e876131f513cc780b 3386596 caja_1.22.2-2+tricia.tar.xz
+Checksums-Sha1: 
+ df58cc9253d9128ed692b01fe6e43df178caddcd 1692 caja_1.22.2-2+tricia.dsc
+ 1fcb70e03250d26d927a4ff1fc255b4e6fc20201 3386596 caja_1.22.2-2+tricia.tar.xz
+Checksums-Sha256: 
+ f7a025e20af2a31863c9a7ecbaf45c914ce0cc6108ce92a3843859b0b7d7db73 1692 caja_1.22.2-2+tricia.dsc
+ a80918578ebdcea3cf2b6965164c31a7bdbece9ea046c4b7684cd7fe0c596313 3386596 caja_1.22.2-2+tricia.tar.xz
+
+Package: desktop-file-utils
+Format: 3.0 (native)
+Binary: desktop-file-utils
+Architecture: any
+Version: 0.23+linuxmint8
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Uploaders: Loïc Minier <lool@debian.org>, Josselin Mouette <joss@debian.org>, Dmitry Smirnov <onlyjob@debian.org>
+Homepage: http://www.freedesktop.org/wiki/Software/desktop-file-utils
+Standards-Version: 3.9.8
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-desktop/desktop-file-utils/ubuntu
+Build-Depends: debhelper (>= 9), dh-autoreconf, libpopt-dev, libglib2.0-dev
+Package-List:
+ desktop-file-utils deb devel optional arch=any
+Priority: optional
+Section: devel
+Directory: pool/upstream/d/desktop-file-utils
+Files: 
+ 6834764ab1a3cb90c76e20eed3bc518a 995 desktop-file-utils_0.23+linuxmint8.dsc
+ 53c3460db0a74fcbfbed1a28c4c13f32 138372 desktop-file-utils_0.23+linuxmint8.tar.xz
+Checksums-Sha1: 
+ 2a9958fa196c3cf9bf4b646cde5f245e9134674c 995 desktop-file-utils_0.23+linuxmint8.dsc
+ e34a4f3d60cf0ed537bba952a9c8240e04633869 138372 desktop-file-utils_0.23+linuxmint8.tar.xz
+Checksums-Sha256: 
+ 4690b753a7ace2e888943fab140340cbc6d2197b103c4f9d5d8a64c875bfdbe5 995 desktop-file-utils_0.23+linuxmint8.dsc
+ 4691ee08543f44669495b5f94bbcfe036ec3755aeea38ba7a6c977dadec349ab 138372 desktop-file-utils_0.23+linuxmint8.tar.xz
+Original-Maintainer: Ross Burton <ross@debian.org>
+
+Package: firefox
+Format: 3.0 (native)
+Binary: firefox, firefox-dbg, firefox-dev, firefox-mozsymbols, firefox-geckodriver, firefox-locale-af, firefox-locale-an, firefox-locale-ar, firefox-locale-as, firefox-locale-ast, firefox-locale-az, firefox-locale-be, firefox-locale-bg, firefox-locale-bn, firefox-locale-br, firefox-locale-bs, firefox-locale-ca, firefox-locale-cak, firefox-locale-cs, firefox-locale-csb, firefox-locale-cy, firefox-locale-da, firefox-locale-de, firefox-locale-el, firefox-locale-en, firefox-locale-eo, firefox-locale-es, firefox-locale-et, firefox-locale-eu, firefox-locale-fa, firefox-locale-fi, firefox-locale-fr, firefox-locale-fy, firefox-locale-ga, firefox-locale-gd, firefox-locale-gl, firefox-locale-gn, firefox-locale-gu, firefox-locale-he, firefox-locale-hi, firefox-locale-hr, firefox-locale-hsb, firefox-locale-hu, firefox-locale-hy, firefox-locale-ia, firefox-locale-id, firefox-locale-is, firefox-locale-it, firefox-locale-ja, firefox-locale-ka, firefox-locale-kab, firefox-locale-kk,
+ firefox-locale-km, firefox-locale-kn, firefox-locale-ko, firefox-locale-ku, firefox-locale-lg, firefox-locale-lt, firefox-locale-lv, firefox-locale-mai, firefox-locale-mk, firefox-locale-ml, firefox-locale-mn, firefox-locale-mr, firefox-locale-ms, firefox-locale-my, firefox-locale-nb, firefox-locale-ne, firefox-locale-nl, firefox-locale-nn, firefox-locale-nso, firefox-locale-oc, firefox-locale-or, firefox-locale-pa, firefox-locale-pl, firefox-locale-pt, firefox-locale-ro, firefox-locale-ru, firefox-locale-si, firefox-locale-sk, firefox-locale-sl, firefox-locale-sq, firefox-locale-sr, firefox-locale-sv, firefox-locale-sw, firefox-locale-ta, firefox-locale-te, firefox-locale-th, firefox-locale-tr, firefox-locale-uk, firefox-locale-ur, firefox-locale-uz, firefox-locale-vi, firefox-locale-xh, firefox-locale-zh-hans, firefox-locale-zh-hant,
+ firefox-locale-zu
+Architecture: any
+Version: 77.0.1+linuxmint1+tricia
+Maintainer: Ubuntu Mozilla Team <ubuntu-mozillateam@lists.ubuntu.com>
+Standards-Version: 3.9.1
+Vcs-Bzr: https://code.launchpad.net/~mozillateam/firefox/firefox.bionic
+Testsuite: autopkgtest
+Testsuite-Triggers: python3-apt, python3-selenium
+Build-Depends: cdbs, locales, debhelper (>= 9), autotools-dev, autoconf2.13, zip, libx11-dev, libx11-xcb-dev, libxt-dev, libxext-dev, libgtk2.0-dev (>= 2.14), libgtk-3-dev (>= 3.4), libglib2.0-dev (>= 2.18), libpango1.0-dev (>= 1.14.0), libfontconfig1-dev, libfreetype6-dev (>= 2.0.1), libstartup-notification0-dev, libasound2-dev, libcurl4-openssl-dev, libdbus-glib-1-dev (>= 0.60), lsb-release, libiw-dev, mesa-common-dev, libnotify-dev (>= 0.4), libxrender-dev, libpulse-dev, yasm (>= 1.1), unzip, dbus-x11, xvfb, python (>= 2.7), python3 (>= 3.5), libffi-dev (>= 3.0.9) [powerpc ppc64el s390x], clang-10 | clang-9 | clang-8, libclang-10-dev | libclang-9-dev | libclang-8-dev, llvm-10-dev | llvm-9-dev | llvm-8-dev, cargo (>= 0.42), rustc (>= 1.41.0), nodejs-mozilla (>= 10.19), nasm-mozilla (>= 2.14.02)
+Package-List:
+ firefox deb web optional arch=any
+ firefox-dbg deb debug extra arch=any
+ firefox-dev deb oldlibs extra arch=any
+ firefox-geckodriver deb web optional arch=any
+ firefox-locale-af deb web optional arch=any
+ firefox-locale-an deb web optional arch=any
+ firefox-locale-ar deb web optional arch=any
+ firefox-locale-as deb web optional arch=any
+ firefox-locale-ast deb web optional arch=any
+ firefox-locale-az deb web optional arch=any
+ firefox-locale-be deb web optional arch=any
+ firefox-locale-bg deb web optional arch=any
+ firefox-locale-bn deb web optional arch=any
+ firefox-locale-br deb web optional arch=any
+ firefox-locale-bs deb web optional arch=any
+ firefox-locale-ca deb web optional arch=any
+ firefox-locale-cak deb web optional arch=any
+ firefox-locale-cs deb web optional arch=any
+ firefox-locale-csb deb web optional arch=any
+ firefox-locale-cy deb web optional arch=any
+ firefox-locale-da deb web optional arch=any
+ firefox-locale-de deb web optional arch=any
+ firefox-locale-el deb web optional arch=any
+ firefox-locale-en deb web optional arch=any
+ firefox-locale-eo deb web optional arch=any
+ firefox-locale-es deb web optional arch=any
+ firefox-locale-et deb web optional arch=any
+ firefox-locale-eu deb web optional arch=any
+ firefox-locale-fa deb web optional arch=any
+ firefox-locale-fi deb web optional arch=any
+ firefox-locale-fr deb web optional arch=any
+ firefox-locale-fy deb web optional arch=any
+ firefox-locale-ga deb web optional arch=any
+ firefox-locale-gd deb web optional arch=any
+ firefox-locale-gl deb web optional arch=any
+ firefox-locale-gn deb web optional arch=any
+ firefox-locale-gu deb web optional arch=any
+ firefox-locale-he deb web optional arch=any
+ firefox-locale-hi deb web optional arch=any
+ firefox-locale-hr deb web optional arch=any
+ firefox-locale-hsb deb web optional arch=any
+ firefox-locale-hu deb web optional arch=any
+ firefox-locale-hy deb web optional arch=any
+ firefox-locale-ia deb web optional arch=any
+ firefox-locale-id deb web optional arch=any
+ firefox-locale-is deb web optional arch=any
+ firefox-locale-it deb web optional arch=any
+ firefox-locale-ja deb web optional arch=any
+ firefox-locale-ka deb web optional arch=any
+ firefox-locale-kab deb web optional arch=any
+ firefox-locale-kk deb web optional arch=any
+ firefox-locale-km deb web optional arch=any
+ firefox-locale-kn deb web optional arch=any
+ firefox-locale-ko deb web optional arch=any
+ firefox-locale-ku deb web optional arch=any
+ firefox-locale-lg deb web optional arch=any
+ firefox-locale-lt deb web optional arch=any
+ firefox-locale-lv deb web optional arch=any
+ firefox-locale-mai deb web optional arch=any
+ firefox-locale-mk deb web optional arch=any
+ firefox-locale-ml deb web optional arch=any
+ firefox-locale-mn deb web optional arch=any
+ firefox-locale-mr deb web optional arch=any
+ firefox-locale-ms deb web optional arch=any
+ firefox-locale-my deb web optional arch=any
+ firefox-locale-nb deb web optional arch=any
+ firefox-locale-ne deb web optional arch=any
+ firefox-locale-nl deb web optional arch=any
+ firefox-locale-nn deb web optional arch=any
+ firefox-locale-nso deb web optional arch=any
+ firefox-locale-oc deb web optional arch=any
+ firefox-locale-or deb web optional arch=any
+ firefox-locale-pa deb web optional arch=any
+ firefox-locale-pl deb web optional arch=any
+ firefox-locale-pt deb web optional arch=any
+ firefox-locale-ro deb web optional arch=any
+ firefox-locale-ru deb web optional arch=any
+ firefox-locale-si deb web optional arch=any
+ firefox-locale-sk deb web optional arch=any
+ firefox-locale-sl deb web optional arch=any
+ firefox-locale-sq deb web optional arch=any
+ firefox-locale-sr deb web optional arch=any
+ firefox-locale-sv deb web optional arch=any
+ firefox-locale-sw deb web optional arch=any
+ firefox-locale-ta deb web optional arch=any
+ firefox-locale-te deb web optional arch=any
+ firefox-locale-th deb web optional arch=any
+ firefox-locale-tr deb web optional arch=any
+ firefox-locale-uk deb web optional arch=any
+ firefox-locale-ur deb web optional arch=any
+ firefox-locale-uz deb web optional arch=any
+ firefox-locale-vi deb web optional arch=any
+ firefox-locale-xh deb web optional arch=any
+ firefox-locale-zh-hans deb web optional arch=any
+ firefox-locale-zh-hant deb web optional arch=any
+ firefox-locale-zu deb web optional arch=any
+ firefox-mozsymbols deb debug extra arch=amd64,i386,armel
+Priority: optional
+Section: web
+Directory: pool/upstream/f/firefox
+Files: 
+ eb851e6266bfc1a7792884ce02f785a5 7952 firefox_77.0.1+linuxmint1+tricia.dsc
+ c5d73bae82a8cf052be329ee5661270a 332846848 firefox_77.0.1+linuxmint1+tricia.tar.xz
+Checksums-Sha1: 
+ d240263b4372d172113a6d9384b990ef061c0ea9 7952 firefox_77.0.1+linuxmint1+tricia.dsc
+ c1922e1573919e00b9d7b1e2475607fea2ba7a9d 332846848 firefox_77.0.1+linuxmint1+tricia.tar.xz
+Checksums-Sha256: 
+ a6ac3df446e3dabc26bf37ab5ac36f2fd8b8acaa14d5042129a7ddc459fe9b99 7952 firefox_77.0.1+linuxmint1+tricia.dsc
+ 1aa467471b9c110eceea577bc182dc2a3fe74801b55ef76b55e28aaeec5bd7f4 332846848 firefox_77.0.1+linuxmint1+tricia.tar.xz
+
+Package: garcon
+Format: 3.0 (native)
+Binary: libgarcon-1-dev, libgarcon-1-0-dev, libgarcon-gtk3-1-dev, libgarcon-1-0, libgarcon-gtk3-1-0, libgarcon-common
+Architecture: any all
+Version: 0.6.4-1~18.04mint1
+Maintainer: Debian Xfce Maintainers <debian-xfce@lists.debian.org>
+Uploaders: Yves-Alexis Perez <corsac@debian.org>
+Homepage: http://www.xfce.org/
+Standards-Version: 4.4.0
+Vcs-Browser: https://salsa.debian.org/xfce-team/desktop/garcon
+Vcs-Git: https://salsa.debian.org/xfce-team/desktop/garcon.git
+Build-Depends: debhelper-compat (= 11), dpkg-dev (>= 1.16.1), gtk-doc-tools, dh-autoreconf, intltool (>= 0.31), libglib2.0-dev, libgtk-3-dev (>= 3.14.0), libgtk2.0-dev (>= 2.24), libxfce4ui-1-dev (>= 4.10), libxfce4ui-2-dev (>= 4.11), libxfce4util-dev (>= 4.10), pkg-config, xfce4-dev-tools
+Package-List:
+ libgarcon-1-0 deb libs optional arch=any
+ libgarcon-1-0-dev deb oldlibs optional arch=any
+ libgarcon-1-dev deb libdevel optional arch=any
+ libgarcon-common deb libs optional arch=all
+ libgarcon-gtk3-1-0 deb libs optional arch=any
+ libgarcon-gtk3-1-dev deb libdevel optional arch=any
+Priority: optional
+Section: xfce
+Directory: pool/upstream/g/garcon
+Files: 
+ 5fcc40163f1b16a145458b0378b6ff9d 1394 garcon_0.6.4-1~18.04mint1.dsc
+ a170959ccb275191955483a5fc084739 444912 garcon_0.6.4-1~18.04mint1.tar.xz
+Checksums-Sha1: 
+ a395f7ddf998990de24692833a450c8d8eae675b 1394 garcon_0.6.4-1~18.04mint1.dsc
+ 40dc09a81d4e30d68f6a7e272f2ecfb0a08be4b1 444912 garcon_0.6.4-1~18.04mint1.tar.xz
+Checksums-Sha256: 
+ 5f4bf638f65a3e1a8d1cf73aac554408b935c09f70d49d9e8e63f2ae1e3a0d89 1394 garcon_0.6.4-1~18.04mint1.dsc
+ 8339b5b20dc253edf54be02cd03e4be40d8d2d3d1fa3dc5ad4b52ceba7099695 444912 garcon_0.6.4-1~18.04mint1.tar.xz
+
+Package: gdebi
+Format: 3.0 (native)
+Binary: gdebi-core, gdebi
+Architecture: all
+Version: 0.9.5.7xmint9
+Maintainer: Linux Mint <root@linuxmint.com>
+Standards-Version: 3.9.7
+Build-Depends: debhelper (>= 9), dh-python, gir1.2-gtk-3.0, mint-common, python3-all, python3-apt, python3-gi, python3-nose, python3-setuptools, intltool, xvfb, xauth, lintian
+Package-List:
+ gdebi deb admin optional arch=all
+ gdebi-core deb admin optional arch=all
+Priority: optional
+Section: admin
+Directory: pool/upstream/g/gdebi
+Files: 
+ a0dec6c556a20e72e3fa46f493afc622 721 gdebi_0.9.5.7xmint9.dsc
+ c31f2d9294443d574895cc7c441731e7 162624 gdebi_0.9.5.7xmint9.tar.xz
+Checksums-Sha1: 
+ 0fa887c6274378436f9a74766cc259039d6b5d39 721 gdebi_0.9.5.7xmint9.dsc
+ 47e739d75a9420c0c2fdc932e4e75b44c56f8dfe 162624 gdebi_0.9.5.7xmint9.tar.xz
+Checksums-Sha256: 
+ 054e51bbbce4b563f2ed66ad30cc0a6f07c22a15ff1cc27277fc67b13c2df52d 721 gdebi_0.9.5.7xmint9.dsc
+ f30f2a06d5e7697532de3ea04b4cc7f3f5e6098641852929971ae57b3bcb5926 162624 gdebi_0.9.5.7xmint9.tar.xz
+
+Package: gnome-calendar
+Format: 3.0 (native)
+Binary: gnome-calendar
+Architecture: any
+Version: 3.28.2-0ubuntu0.18.04.1mint1+tessa
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Uploaders: Jeremy Bicha <jbicha@debian.org>, Michael Biebl <biebl@debian.org>, Tim Lunn <tim@feathertop.org>
+Homepage: https://wiki.gnome.org/Apps/Calendar
+Standards-Version: 4.1.4
+Vcs-Browser: https://salsa.debian.org/gnome-team/gnome-calendar
+Vcs-Git: https://salsa.debian.org/gnome-team/gnome-calendar.git
+Build-Depends: appstream-util, debhelper (>= 11), gnome-pkg-tools, gsettings-desktop-schemas-dev (>= 3.21.2), libdazzle-1.0-dev (>= 3.26.1), libecal1.2-dev (>= 3.17.1), libedataserver1.2-dev (>= 3.17.1), libedataserverui1.2-dev (>= 3.17.1), libgeoclue-2-dev (>= 2.4), libgeocode-glib-dev (>= 3.23), libglib2.0-dev (>= 2.43.4), libgoa-1.0-dev (>= 3.2.0), libgtk-3-dev (>= 3.22.20), libgweather-3-dev (>= 3.27.2), libical-dev (>= 1.0.1), libsoup2.4-dev, meson (>= 0.41.0), pkg-config (>= 0.22)
+Package-List:
+ gnome-calendar deb gnome optional arch=any
+Priority: optional
+Section: gnome
+Directory: pool/upstream/g/gnome-calendar
+Files: 
+ 90bc6e48ca1199814b9efe8c358dc797 1530 gnome-calendar_3.28.2-0ubuntu0.18.04.1mint1+tessa.dsc
+ 3b3fa3e2f4ce0d7de22a74b2b3a58f89 2444032 gnome-calendar_3.28.2-0ubuntu0.18.04.1mint1+tessa.tar.xz
+Checksums-Sha1: 
+ 077d6773a4caec716c52eeb1f3d4988b169c2126 1530 gnome-calendar_3.28.2-0ubuntu0.18.04.1mint1+tessa.dsc
+ 96c5a12fc290690df0131e700ee813318da94826 2444032 gnome-calendar_3.28.2-0ubuntu0.18.04.1mint1+tessa.tar.xz
+Checksums-Sha256: 
+ 6c569593ab99ca7066248108c27a8010fc6b3f903583bd9660e94411c079df78 1530 gnome-calendar_3.28.2-0ubuntu0.18.04.1mint1+tessa.dsc
+ 0205107d1d04117985dcefb79b82039229bf8c0b371f2c5ef0f35f39db43b968 2444032 gnome-calendar_3.28.2-0ubuntu0.18.04.1mint1+tessa.tar.xz
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+
+Package: gnome-logs
+Format: 3.0 (native)
+Binary: gnome-logs
+Architecture: linux-any
+Version: 3.28.0-1linuxmint1
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Uploaders: Emilio Pozuelo Monfort <pochu@debian.org>, Jeremy Bicha <jbicha@debian.org>, Michael Biebl <biebl@debian.org>
+Homepage: https://wiki.gnome.org/Apps/Logs
+Standards-Version: 4.1.2
+Vcs-Browser: https://salsa.debian.org/gnome-team/gnome-logs
+Vcs-Git: https://salsa.debian.org/gnome-team/gnome-logs.git
+Build-Depends: appstream-util, debhelper (>= 11), desktop-file-utils, gnome-common, gnome-pkg-tools, libglib2.0-dev (>= 2.43.90), libgtk-3-dev (>= 3.22.0), libsystemd-dev, yelp-tools
+Package-List:
+ gnome-logs deb gnome optional arch=linux-any
+Priority: optional
+Section: gnome
+Directory: pool/upstream/g/gnome-logs
+Files: 
+ 29a241d91200da6748ecc5f7cbd99bae 1063 gnome-logs_3.28.0-1linuxmint1.dsc
+ 88dec39f7a9d043181a95a62efc03b89 773352 gnome-logs_3.28.0-1linuxmint1.tar.xz
+Checksums-Sha1: 
+ 85a81355cd48d96bbf464ef8a384d37dd4639bd9 1063 gnome-logs_3.28.0-1linuxmint1.dsc
+ 3d80a0c89de331413e2b80b0fdf01c385f403e13 773352 gnome-logs_3.28.0-1linuxmint1.tar.xz
+Checksums-Sha256: 
+ 25c13a522199f22f5adf4cacbffd2915559e5328a838eff77648101a39a78866 1063 gnome-logs_3.28.0-1linuxmint1.dsc
+ 0064bfb5cd3f731b37c584c80637513219fb77c3072f0aae158aa15289e70666 773352 gnome-logs_3.28.0-1linuxmint1.tar.xz
+
+Package: gnome-online-accounts
+Format: 3.0 (native)
+Binary: gnome-online-accounts, libgoa-1.0-0b, libgoa-1.0-dev, libgoa-backend-1.0-1, libgoa-backend-1.0-dev, libgoa-1.0-common, libgoa-1.0-doc, gir1.2-goa-1.0
+Architecture: any all
+Version: 3.28.0-0ubuntu2mint1
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Uploaders: Jeremy Bicha <jbicha@debian.org>, Michael Biebl <biebl@debian.org>
+Homepage: https://wiki.gnome.org/Projects/GnomeOnlineAccounts
+Standards-Version: 4.1.2
+Vcs-Browser: https://salsa.debian.org/gnome-team/gnome-online-accounts
+Vcs-Git: https://salsa.debian.org/gnome-team/gnome-online-accounts.git
+Build-Depends: debhelper (>= 10.3), autoconf-archive, gnome-pkg-tools (>= 0.10), gobject-introspection (>= 0.9.12-4~), gtk-doc-tools, libgcr-3-dev, libgirepository1.0-dev (>= 0.9.3), libglib2.0-dev (>= 2.52), libglib2.0-doc, libgtk-3-dev (>= 3.19.12), libjson-glib-dev, libkrb5-dev, librest-dev, libsecret-1-dev, libsnapd-glib-dev, libsoup2.4-dev (>= 2.42), libwebkit2gtk-4.0-dev (>= 2.12.0), valac
+Package-List:
+ gir1.2-goa-1.0 deb introspection optional arch=any
+ gnome-online-accounts deb gnome optional arch=any
+ libgoa-1.0-0b deb libs optional arch=any
+ libgoa-1.0-common deb libs optional arch=all
+ libgoa-1.0-dev deb libdevel optional arch=any
+ libgoa-1.0-doc deb doc optional arch=all
+ libgoa-backend-1.0-1 deb libs optional arch=any
+ libgoa-backend-1.0-dev deb libdevel optional arch=any
+Priority: optional
+Section: gnome
+Directory: pool/upstream/g/gnome-online-accounts
+Files: 
+ 5d2ed755b77d6108545bed4a941fdc23 1886 gnome-online-accounts_3.28.0-0ubuntu2mint1.dsc
+ b632bb62724f3ba52760bc53e99002eb 1771772 gnome-online-accounts_3.28.0-0ubuntu2mint1.tar.xz
+Checksums-Sha1: 
+ fe3e28bc0dcc4f22fe76f4bd264006a263cc6826 1886 gnome-online-accounts_3.28.0-0ubuntu2mint1.dsc
+ 39baf42189c30a9ec3029ba78f72452579585fdb 1771772 gnome-online-accounts_3.28.0-0ubuntu2mint1.tar.xz
+Checksums-Sha256: 
+ f3aee8933df5f64ba90f5cc7615c5fd978a46730d7289067e11203c881418ef3 1886 gnome-online-accounts_3.28.0-0ubuntu2mint1.dsc
+ 95b41b6b273bbaab3b683c754970d90ffdae83bf15a77319521c33cbc4fb9728 1771772 gnome-online-accounts_3.28.0-0ubuntu2mint1.tar.xz
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+
+Package: gnome-screenshot
+Format: 3.0 (native)
+Binary: gnome-screenshot
+Architecture: any
+Version: 3.25.0-1linuxmint3
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Uploaders: Michael Biebl <biebl@debian.org>, Sjoerd Simons <sjoerd@debian.org>
+Homepage: https://wiki.gnome.org/Apps/Attic/GnomeUtils
+Standards-Version: 3.9.8
+Vcs-Browser: https://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/gnome-screenshot
+Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/gnome-screenshot
+Build-Depends: appstream, debhelper (>= 10.3), gnome-pkg-tools (>= 0.10), libglib2.0-dev (>= 2.35.1), libgtk-3-dev (>= 3.10.0), libcanberra-gtk3-dev (>= 0.26-3~), libxext-dev, libx11-dev, meson (>= 0.40.1)
+Package-List:
+ gnome-screenshot deb gnome optional arch=any
+Priority: optional
+Section: gnome
+Directory: pool/upstream/g/gnome-screenshot
+Files: 
+ eefbcd8db957d1fbaf3f7ffe8edcd4a1 1208 gnome-screenshot_3.25.0-1linuxmint3.dsc
+ cd95b10531439287d553e08cc5cd8285 235184 gnome-screenshot_3.25.0-1linuxmint3.tar.xz
+Checksums-Sha1: 
+ 189f5b93c0dc6f97c6c676035e6bcee8cd9d59aa 1208 gnome-screenshot_3.25.0-1linuxmint3.dsc
+ 5a3426825bd8b55ad67c00ad4db83a6039a3506c 235184 gnome-screenshot_3.25.0-1linuxmint3.tar.xz
+Checksums-Sha256: 
+ 5670d273558949658590e8c5a097b1120b7804f3945d6555db6967b9ead1d928 1208 gnome-screenshot_3.25.0-1linuxmint3.dsc
+ 11534e436e32bc0226de0407e773ae900778edccf6855afee68ce80ebe3214d7 235184 gnome-screenshot_3.25.0-1linuxmint3.tar.xz
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+
+Package: gnome-terminal
+Format: 3.0 (native)
+Binary: gnome-terminal, gnome-terminal-data, nautilus-extension-gnome-terminal
+Architecture: any all
+Version: 3.28.1-1ubuntu1mint2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Uploaders: Jeremy Bicha <jbicha@debian.org>, Michael Biebl <biebl@debian.org>
+Homepage: https://wiki.gnome.org/Apps/Terminal
+Standards-Version: 4.1.4
+Vcs-Browser: https://bazaar.launchpad.net/~ubuntu-desktop/gnome-terminal/ubuntu/files
+Vcs-Bzr: lp:~ubuntu-desktop/gnome-terminal/ubuntu
+Build-Depends: debhelper (>= 11), dh-exec, gnome-common, intltool (>= 0.50.0), libx11-dev, libdconf-dev (>= 0.14.0), libgtk-3-dev (>= 3.20), libglib2.0-dev (>= 2.42.0), libvte-2.91-dev (>= 0.52.0), libsm-dev, gnome-pkg-tools (>= 0.10), docbook-to-man, uuid-dev, yelp-tools, desktop-file-utils, gsettings-desktop-schemas-dev (>= 0.1.0), gnome-shell [linux-any], libnautilus-extension-dev (>= 3.21.92-3~)
+Package-List:
+ gnome-terminal deb gnome optional arch=any
+ gnome-terminal-data deb gnome optional arch=all
+ nautilus-extension-gnome-terminal deb gnome optional arch=any
+Priority: optional
+Section: gnome
+Directory: pool/upstream/g/gnome-terminal
+Files: 
+ d654c1c8e978a14578ad6d75d893da29 1676 gnome-terminal_3.28.1-1ubuntu1mint2.dsc
+ da8fbde4cca1ae3ca7e2ad87bf5205b9 2070072 gnome-terminal_3.28.1-1ubuntu1mint2.tar.xz
+Checksums-Sha1: 
+ c084ee9afe822d82c6665fed7a42d3cb59feb99d 1676 gnome-terminal_3.28.1-1ubuntu1mint2.dsc
+ c7ea1bb1d82b4423754d911e8cf136c5f1858e1c 2070072 gnome-terminal_3.28.1-1ubuntu1mint2.tar.xz
+Checksums-Sha256: 
+ 2c647e9256eb4b89dcaf4c9be709316d3c6645dd83837336f28b2551b3f76f79 1676 gnome-terminal_3.28.1-1ubuntu1mint2.dsc
+ a173d9dd00c5f7ff4907844a6654ab8619f86fabf40178ebeff2a3a6713e4cd5 2070072 gnome-terminal_3.28.1-1ubuntu1mint2.tar.xz
+Debian-Vcs-Browser: https://salsa.debian.org/gnome-team/gnome-terminal
+Debian-Vcs-Git: https://salsa.debian.org/gnome-team/gnome-terminal.git
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+
+Package: gnote
+Format: 3.0 (native)
+Binary: gnote
+Architecture: any
+Version: 3.34.0-0mint2+tricia
+Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Uploaders: Jeremy Bicha <jbicha@debian.org>
+Homepage: https://wiki.gnome.org/Apps/Gnote
+Standards-Version: 4.1.3
+Vcs-Browser: https://salsa.debian.org/gnome-team/gnote
+Vcs-Git: https://salsa.debian.org/gnome-team/gnote.git
+Build-Depends: debhelper (>= 11), desktop-file-utils, gnome-pkg-tools (>= 0.10), intltool (>= 0.35), libglibmm-2.4-dev (>= 2.32), libgtk-3-dev (>= 3.20), libgtkmm-3.0-dev (>= 3.18), libgtkspell3-3-dev (>= 3.0.0), libsecret-1-dev (>= 0.8), libxml2-dev, libxslt1-dev, pkg-config (>= 0.14.0), uuid-dev, yelp-tools
+Package-List:
+ gnote deb gnome optional arch=any
+Priority: optional
+Section: gnome
+Directory: pool/upstream/g/gnote
+Files: 
+ b2c2995625222e42006974426588f898 1074 gnote_3.34.0-0mint2+tricia.dsc
+ 1a5f1560986102d07ad241715d243dc9 3426604 gnote_3.34.0-0mint2+tricia.tar.xz
+Checksums-Sha1: 
+ 2a354c538cbe7e3ed1a4502f0bbfe216c625ebf7 1074 gnote_3.34.0-0mint2+tricia.dsc
+ ad439f08e6d1f5d60d7037a787a27a2a4c066a42 3426604 gnote_3.34.0-0mint2+tricia.tar.xz
+Checksums-Sha256: 
+ 0e50c760fc723ff8b41ac8f0f42edab2c82174cd4665b5ab545dd9fc7b366ea0 1074 gnote_3.34.0-0mint2+tricia.dsc
+ cbfe0d08e9a353eccb4c65f2e9f980527144b25d261c302f62fcc1bae12fcce7 3426604 gnote_3.34.0-0mint2+tricia.tar.xz
+
+Package: indicator-sound
+Format: 1.0
+Binary: indicator-sound
+Architecture: any
+Version: 12.10.2+16.04.20160714-1linuxmint1
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Homepage: https://launchpad.net/indicator-sound
+Standards-Version: 3.9.4
+Vcs-Browser: https://bazaar.launchpad.net/~indicator-applet-developers/indicator-sound/trunk.13.04/files
+Vcs-Bzr: https://code.launchpad.net/~indicator-applet-developers/indicator-sound/trunk.13.04
+Build-Depends: debhelper (>= 9.0), cmake, cmake-extras (>= 0.4), dbus, dbus-test-runner (>> 14.04.0+14.04.20150120.1), dh-translations, gir1.2-accountsservice-1.0, gnome-common, google-mock (>= 1.6.0+svn437), gsettings-ubuntu-schemas, autotools-dev, valac (>= 0.20), libaccountsservice-dev, libdbustest1-dev (>= 15.04.0), libgirepository1.0-dev, libglib2.0-dev (>= 2.32.0), libgtest-dev, libqtdbusmock1-dev (>= 0.3), libqtdbustest1-dev, libunity-api-dev, liburl-dispatcher1-dev, libpulse-dev (>= 1:4.0-0ubuntu21), libpulse-mainloop-glib0 (>= 0.9.18), libnotify-dev, libgee-0.8-dev, libxml2-dev, pulseaudio, python3-dbusmock, qt5-default, qtbase5-dev, qtbase5-dev-tools, qtdeclarative5-dev, qtdeclarative5-dev-tools
+Package-List:
+ indicator-sound deb sound extra arch=any
+Priority: extra
+Section: sound
+Directory: pool/upstream/i/indicator-sound
+Files: 
+ 7dd4dd5da50930b3f0f17d257e23341a 1677 indicator-sound_12.10.2+16.04.20160714-1linuxmint1.dsc
+ 671301f49b511dceb4be464082f3fc23 15273343 indicator-sound_12.10.2+16.04.20160714-1linuxmint1.tar.gz
+Checksums-Sha1: 
+ 8ee4a14fbc5dc7a3ddfc2c197e3529f9ff70c60f 1677 indicator-sound_12.10.2+16.04.20160714-1linuxmint1.dsc
+ 9c9c6eeaf6dd01fb8d3305054048dd204de7ee0c 15273343 indicator-sound_12.10.2+16.04.20160714-1linuxmint1.tar.gz
+Checksums-Sha256: 
+ 58d50f21fbe84b4384bea0a02e5538bc979de345f39289c98355bd8bb2242edd 1677 indicator-sound_12.10.2+16.04.20160714-1linuxmint1.dsc
+ 8ac3980301b499783bf6a77f19d89e09981fefb1efbe010632595c4f236b878e 15273343 indicator-sound_12.10.2+16.04.20160714-1linuxmint1.tar.gz
+Original-Maintainer: Conor Curran <conor.curran@canonical.com>
+
+Package: libappindicator
+Format: 1.0
+Binary: python-appindicator, libappindicator1, gir1.2-appindicator-0.1, libappindicator-dev, libappindicator-doc, libappindicator3-1, libappindicator3-dev, gir1.2-appindicator3-0.1, libappindicator0.1-cil, libappindicator0.1-cil-dev
+Architecture: any all
+Version: 12.10.1+18.04.20180322.1-1mint2
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Homepage: https://launchpad.net/libappindicator
+Standards-Version: 3.9.1
+Vcs-Browser: https://bazaar.launchpad.net/~indicator-applet-developers/libappindicator/trunk.16.10/files
+Vcs-Bzr: https://code.launchpad.net/~indicator-applet-developers/libappindicator/trunk.16.10
+Build-Depends: debhelper (>= 9), dh-autoreconf, python-all-dev, at-spi2-core, cli-common-dev (>= 0.5.7) [!arm64 !ppc64el], gnome-common, gobject-introspection, intltool, gtk-doc-tools, libxml2-utils, libnunit-cil-dev [!arm64 !ppc64el], dbus-test-runner, xvfb, valac, mono-devel (>= 2.4.3) [!arm64 !ppc64el], libglib2.0-dev (>= 2.35.4), libgtk-3-dev (>= 2.91.3), libgtk2.0-dev (>= 2.12.0), python-gtk2-dev, gtk-sharp2-gapi [!arm64 !ppc64el], libgtk2.0-cil-dev [!arm64 !ppc64el], libdbus-glib-1-dev (>= 0.82), libindicator-dev (>= 0.3.90), libindicator3-dev (>= 0.3.90), libdbusmenu-glib-dev (>= 0.5.90), libdbusmenu-gtk-dev (>= 0.5.90), libdbusmenu-gtk3-dev (>= 0.5.90), libgirepository1.0-dev, libxapp-dev
+Package-List:
+ gir1.2-appindicator-0.1 deb introspection optional arch=any
+ gir1.2-appindicator3-0.1 deb introspection optional arch=any
+ libappindicator-dev deb libdevel optional arch=any
+ libappindicator-doc deb doc optional arch=all
+ libappindicator0.1-cil deb cli-mono optional arch=all
+ libappindicator0.1-cil-dev deb libdevel optional arch=all
+ libappindicator1 deb libs optional arch=any
+ libappindicator3-1 deb libs optional arch=any
+ libappindicator3-dev deb libdevel optional arch=any
+ python-appindicator deb python optional arch=any
+Priority: optional
+Section: gnome
+Directory: pool/upstream/liba/libappindicator
+Files: 
+ 2c86b7fae141c57d005acf800c2d142b 2309 libappindicator_12.10.1+18.04.20180322.1-1mint2.dsc
+ 66195a170aa7fc53fad7f845f4b936d8 241807 libappindicator_12.10.1+18.04.20180322.1-1mint2.tar.gz
+Checksums-Sha1: 
+ f01622ea95131ffc0669b5102e13832020c8aaaa 2309 libappindicator_12.10.1+18.04.20180322.1-1mint2.dsc
+ 2ed04256d6829204dcb5f1ec0da206d1f74279b7 241807 libappindicator_12.10.1+18.04.20180322.1-1mint2.tar.gz
+Checksums-Sha256: 
+ 90acc136a184092775528cd0f2e104a780ba0aeb175f824025fd0ffeee0cbc3a 2309 libappindicator_12.10.1+18.04.20180322.1-1mint2.dsc
+ c2acb4ac5045aaec5f9a5890d9f9bbfa781c28615bfd43dc298f34ceb252cb43 241807 libappindicator_12.10.1+18.04.20180322.1-1mint2.tar.gz
+Python-Version: all
+
+Package: libgksu
+Format: 3.0 (native)
+Binary: libgksu2-0, libgksu2-dev
+Architecture: any
+Version: 2.0.13~pre1-7linuxmint5
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Martin Pitt <mpitt@debian.org>
+Homepage: http://www.nongnu.org/gksu
+Standards-Version: 3.9.2
+Build-Depends: cdbs, debhelper (>= 8), libgtk2.0-dev (>= 2.12), libgconf2-dev, libstartup-notification0-dev, libgnome-keyring-dev, gettext, dh-autoreconf, gtk-doc-tools, gnome-pkg-tools (>= 0.10), libgtop2-dev, libglib2.0-doc, intltool
+Package-List:
+ libgksu2-0 deb libs optional arch=any
+ libgksu2-dev deb libdevel optional arch=any
+Priority: optional
+Section: admin
+Directory: pool/upstream/libg/libgksu
+Files: 
+ a8d514e472f3450482a63fb63112bf1d 1246 libgksu_2.0.13~pre1-7linuxmint5.dsc
+ f8454ba37f9c3c8e4c46cd33afcc014d 364192 libgksu_2.0.13~pre1-7linuxmint5.tar.xz
+Checksums-Sha1: 
+ 3e9253f53c28deebf7f6dd20f07b4c0dd7784ef1 1246 libgksu_2.0.13~pre1-7linuxmint5.dsc
+ c00f95409477426ac4943c2b3e134cf13b9d8731 364192 libgksu_2.0.13~pre1-7linuxmint5.tar.xz
+Checksums-Sha256: 
+ 12da9bf826336bb559c2a536ab49a7b3d8b8708017603f29e7d8d71ecf49e6da 1246 libgksu_2.0.13~pre1-7linuxmint5.dsc
+ 7f3dbc6f782abecf7978e02b2921e542d8215f8e469131248e37f9cf8a7c2bde 364192 libgksu_2.0.13~pre1-7linuxmint5.tar.xz
+Debian-Vcs-Browser: http://svn.debian.org/wsvn/pkg-gnome/packages/unstable/libgksu/
+Debian-Vcs-Svn: svn://svn.debian.org/svn/pkg-gnome/packages/unstable/libgksu/
+Original-Maintainer: Gustavo Noronha Silva <kov@debian.org>
+
+Package: marco
+Format: 3.0 (native)
+Binary: marco, marco-common, libmarco-private2, libmarco-dev
+Architecture: any all
+Version: 1.22.3-2mint1+tricia
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Uploaders: John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>, Stefano Karapetsas <stefano@karapetsas.com>, Mike Gabriel <sunweaver@debian.org>, Vangelis Mouhtsis <vangelis@gnugr.org>,
+Homepage: http://www.mate-desktop.org/
+Standards-Version: 3.9.7
+Vcs-Browser: https://github.com/mate-desktop/debian-packages
+Vcs-Git: git://github.com/mate-desktop/debian-packages.git
+Build-Depends: debhelper (>= 11), dpkg-dev (>= 1.16.1.1), intltool, libcanberra-gtk3-dev, libglib2.0-dev, libgtk-3-dev, libgtop2-dev, libice-dev, libpango1.0-dev, libsm-dev, libstartup-notification0-dev, libx11-dev, libxcomposite-dev, libxcursor-dev, libxdamage-dev, libxext-dev, libxfixes-dev, libxinerama-dev, libxpresent-dev, libxrandr-dev, libxrender-dev, libxt-dev, mate-common (>= 1.20), x11proto-present-dev, yelp-tools, zenity
+Package-List:
+ libmarco-dev deb libdevel optional arch=any
+ libmarco-private2 deb libs optional arch=any
+ marco deb x11 optional arch=any
+ marco-common deb x11 optional arch=all
+Priority: optional
+Section: x11
+Directory: pool/upstream/m/marco
+Files: 
+ 2e629cffaafad64846e056432c7c38af 1522 marco_1.22.3-2mint1+tricia.dsc
+ 0ffa36be9fcca531bf05f5d9301fccce 1175556 marco_1.22.3-2mint1+tricia.tar.xz
+Checksums-Sha1: 
+ b9ce44ddc81b38f5445e8fd808c9b2d4ec600ff6 1522 marco_1.22.3-2mint1+tricia.dsc
+ decce42e1a2821dbcf6a1093ec2a26ed558e7382 1175556 marco_1.22.3-2mint1+tricia.tar.xz
+Checksums-Sha256: 
+ 38945e34fbf1196404eab53f46fb8953c5a20944b455346c6cb6c807937e4c22 1522 marco_1.22.3-2mint1+tricia.dsc
+ 63b216d5d996ceab65563ed3f60b7aa211889e684a23fdfc9c569fc9b953674c 1175556 marco_1.22.3-2mint1+tricia.tar.xz
+
+Package: mate-media
+Format: 3.0 (native)
+Binary: mate-media, mate-media-common
+Architecture: any all
+Version: 1.22.0-1linuxmint1+tina
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Uploaders: Mike Gabriel <sunweaver@debian.org>, John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>, Stefano Karapetsas <stefano@karapetsas.com>, Vangelis Mouhtsis <vangelis@gnugr.org>,
+Homepage: http://www.mate-desktop.org/
+Standards-Version: 3.9.7
+Vcs-Browser: https://github.com/mate-desktop/debian-packages
+Vcs-Git: git://github.com/mate-desktop/debian-packages.git
+Build-Depends: debhelper (>= 10), dpkg-dev (>= 1.16.1.1), intltool, libcanberra-gtk3-dev, libglib2.0-dev, libgtk-3-dev, libmate-desktop-dev (>= 1.20), libmatemixer-dev (>= 1.20), libxml2-dev, mate-common (>= 1.20)
+Package-List:
+ mate-media deb x11 optional arch=any
+ mate-media-common deb x11 optional arch=all
+Priority: optional
+Section: x11
+Directory: pool/upstream/m/mate-media
+Files: 
+ 976d652a4142d8a883a00ab3289baf76 1226 mate-media_1.22.0-1linuxmint1+tina.dsc
+ 4d2635f82e84487dfa082ba6a42c4276 253212 mate-media_1.22.0-1linuxmint1+tina.tar.xz
+Checksums-Sha1: 
+ ab6cbf2356ad1562556f33f1edd3b5b8fc9e6269 1226 mate-media_1.22.0-1linuxmint1+tina.dsc
+ 198a306204079b0938595d81d6e62f1833f9d31a 253212 mate-media_1.22.0-1linuxmint1+tina.tar.xz
+Checksums-Sha256: 
+ 4dd4cf532034c8656016d85d53a0ab0bd3e24d7a3bc27f2054252784885e4d9a 1226 mate-media_1.22.0-1linuxmint1+tina.dsc
+ 0d8013e8d2b345cf86a257060f72a857dadbc30fd2d73602e5afa8111b44560c 253212 mate-media_1.22.0-1linuxmint1+tina.tar.xz
+
+Package: mate-terminal
+Format: 3.0 (native)
+Binary: mate-terminal, mate-terminal-common
+Architecture: any all
+Version: 1.22.0-2linuxmint1+tina
+Maintainer: Debian+Ubuntu MATE Packaging Team <debian-mate@lists.debian.org>
+Uploaders: John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>, Stefano Karapetsas <stefano@karapetsas.com>, Mike Gabriel <sunweaver@debian.org>, Wences Arana <aranax@debian.org.gt>, Vangelis Mouhtsis <vangelis@gnugr.org>, Martin Wimpress <code@flexion.org>,
+Homepage: http://www.mate-desktop.org
+Standards-Version: 3.9.7
+Vcs-Browser: https://github.com/mate-desktop/debian-packages
+Vcs-Git: git://github.com/mate-desktop/debian-packages.git
+Build-Depends: debhelper (>= 10), dpkg-dev (>= 1.16.1.1), intltool, libdconf-dev, libglib2.0-dev, libgtk-3-dev (>= 3.22), libsm-dev, libvte-2.91-dev (>= 0.48), libx11-dev, mate-common (>= 1.20), yelp-tools
+Package-List:
+ mate-terminal deb x11 optional arch=any
+ mate-terminal-common deb x11 optional arch=all
+Priority: optional
+Section: x11
+Directory: pool/upstream/m/mate-terminal
+Files: 
+ 00abad54268b7044e1bbc4e59bff915a 1317 mate-terminal_1.22.0-2linuxmint1+tina.dsc
+ 2a3d02566eac4f6d5f85bacf4760c834 1286920 mate-terminal_1.22.0-2linuxmint1+tina.tar.xz
+Checksums-Sha1: 
+ 38adf2a98fb9490095ce23c4b64ab9cb6496f1c1 1317 mate-terminal_1.22.0-2linuxmint1+tina.dsc
+ cee7198f4583c79d66f3ece47d97e9f208e517b2 1286920 mate-terminal_1.22.0-2linuxmint1+tina.tar.xz
+Checksums-Sha256: 
+ 7652651e9ec60d0d583cdf12238f46837f87dabb38c7c4b8a0ff8f6cedeca869 1317 mate-terminal_1.22.0-2linuxmint1+tina.dsc
+ 7ebc4fdae878c7f87a0384c35046f92eb065963f29fe72c27aeac77c8ec413b4 1286920 mate-terminal_1.22.0-2linuxmint1+tina.tar.xz
+
+Package: mintsources
+Format: 3.0 (native)
+Binary: mintsources, software-properties-common, software-properties-gtk, python-software-properties, python3-software-properties
+Architecture: all
+Version: 1.9.5
+Maintainer: Clement Lefebvre <root@linuxmint.com>
+Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 9), python
+Package-List:
+ mintsources deb admin optional arch=all essential=yes
+ python-software-properties deb admin optional arch=all
+ python3-software-properties deb admin optional arch=all
+ software-properties-common deb admin optional arch=all
+ software-properties-gtk deb admin optional arch=all
+Priority: optional
+Section: admin
+Directory: pool/upstream/m/mintsources
+Files: 
+ 83dd3e8c2db75f631f1bc35965e89d0d 889 mintsources_1.9.5.dsc
+ e52ceced224ebdde047a1f3cf29ea49e 118336 mintsources_1.9.5.tar.xz
+Checksums-Sha1: 
+ 3b331faac78840ac773974d36d0c3eed8d3059c9 889 mintsources_1.9.5.dsc
+ 8eedfdef25883effb9e5424c3b02c0c086407b41 118336 mintsources_1.9.5.tar.xz
+Checksums-Sha256: 
+ 187a534b82b569708ea94cf6616c72b8668a44c775884bf2dcaf95638108b43c 889 mintsources_1.9.5.dsc
+ 5036a772e2bbbe1bf9e2b365c3c419c7be2b8c39d0c2fa1874c581190c109e1a 118336 mintsources_1.9.5.tar.xz
+
+Package: network-manager-applet
+Format: 3.0 (native)
+Binary: network-manager-gnome, libnm-gtk0, libnm-gtk-dev, gir1.2-nmgtk-1.0, libnma0, libnma-dev, gir1.2-nma-1.0
+Architecture: linux-any
+Version: 1.8.10-2ubuntu3mint1
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Uploaders: Michael Biebl <biebl@debian.org>
+Homepage: https://www.gnome.org/projects/NetworkManager/
+Standards-Version: 4.1.2
+Vcs-Browser: https://git.launchpad.net/~network-manager/network-manager/+git/ubuntu-applet?h=bionic
+Vcs-Git: https://code.launchpad.net/~network-manager/network-manager/+git/ubuntu-applet
+Build-Depends: debhelper (>= 11), dh-translations, gnome-common, intltool, libsecret-1-dev, libgtk-3-dev (>= 3.10), libglib2.0-dev (>= 2.38), libnotify-dev (>= 0.7), libnm-util-dev (>= 1.8), libnm-glib-dev (>= 1.8), libnm-glib-vpn-dev (>= 1.8), network-manager-dev (>= 1.8), libnm-dev (>= 1.8), libmm-glib-dev, libgudev-1.0-dev (>= 147), libjansson-dev (>= 2.7), libselinux-dev, libappindicator3-dev, libdbusmenu-gtk3-dev (>= 16.04), libgcr-3-dev (>= 3.14), libgck-1-dev (>= 3.14), iso-codes, libgirepository1.0-dev, gobject-introspection, gtk-doc-tools, libgtk-3-doc, libglib2.0-doc
+Package-List:
+ gir1.2-nma-1.0 deb introspection optional arch=linux-any
+ gir1.2-nmgtk-1.0 deb introspection optional arch=linux-any
+ libnm-gtk-dev deb libdevel optional arch=linux-any
+ libnm-gtk0 deb libs optional arch=linux-any
+ libnma-dev deb libdevel optional arch=linux-any
+ libnma0 deb libs optional arch=linux-any
+ network-manager-gnome deb gnome optional arch=linux-any
+Priority: optional
+Section: gnome
+Directory: pool/upstream/n/network-manager-applet
+Files: 
+ 43631b6699254fe12a468ec8a9bd1d83 2017 network-manager-applet_1.8.10-2ubuntu3mint1.dsc
+ 1f6d36d4ca88713b00fdb3d5044a8325 1589676 network-manager-applet_1.8.10-2ubuntu3mint1.tar.xz
+Checksums-Sha1: 
+ c1bc2dbff2815034a624c6f6af8e06796ddda705 2017 network-manager-applet_1.8.10-2ubuntu3mint1.dsc
+ 741736dec44b9e9cb44604722e9f7b1525a108b3 1589676 network-manager-applet_1.8.10-2ubuntu3mint1.tar.xz
+Checksums-Sha256: 
+ 48753df52ae11ef90f0f7a5f3655a522d18b1aa8466c34917ee9d023e10331de 2017 network-manager-applet_1.8.10-2ubuntu3mint1.dsc
+ 49ef9b22ebd6e2e9af75c6ed55dcc1c6d66c6c90a9d1f62f16b18338f686e326 1589676 network-manager-applet_1.8.10-2ubuntu3mint1.tar.xz
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+
+Package: onboard
+Format: 3.0 (native)
+Binary: onboard, onboard-common, onboard-data, gnome-shell-extension-onboard
+Architecture: linux-any all
+Version: 1.4.1-2ubuntu1mint3
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Uploaders: Mike Gabriel <sunweaver@debian.org>, Jeremy Bicha <jbicha@ubuntu.com>
+Homepage: https://launchpad.net/onboard
+Standards-Version: 3.9.8
+Vcs-Browser: https://anonscm.debian.org/git/pkg-mate/onboard.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-mate/onboard.git
+Build-Depends: debhelper (>= 9), dh-python, libcanberra-dev, libdconf-dev (>= 0.12.0), libgtk-3-dev, libhunspell-dev, libudev-dev, libwayland-dev, libxkbfile-dev, libxtst-dev, python3-all-dev (>= 3.2), python3-cairo, python3-distutils-extra (>= 2.10), python3-gi
+Package-List:
+ gnome-shell-extension-onboard deb gnome optional arch=all
+ onboard deb gnome optional arch=linux-any
+ onboard-common deb gnome optional arch=all
+ onboard-data deb gnome optional arch=all
+Priority: optional
+Section: gnome
+Directory: pool/upstream/o/onboard
+Files: 
+ 9625b86b0305af63d44c65af81fbf1bb 1371 onboard_1.4.1-2ubuntu1mint3.dsc
+ b17ea1d9ebecb1df8db8aaf4b0308f22 4768544 onboard_1.4.1-2ubuntu1mint3.tar.xz
+Checksums-Sha1: 
+ 1d7cf75796926ed664d9bea42aff8fbffe554827 1371 onboard_1.4.1-2ubuntu1mint3.dsc
+ 5bd69fbbf454b7dd68c11121cbcb4c3752cdecb0 4768544 onboard_1.4.1-2ubuntu1mint3.tar.xz
+Checksums-Sha256: 
+ 8f3363f51dd68086fc11b277ae159b1f24dfc25bbbef31618d5038f8d53d48cf 1371 onboard_1.4.1-2ubuntu1mint3.dsc
+ 8d05c9a9fcc25af3889d2002b3266e28f8ae86519f7d59ff8f0e1ca3c0cc8269 4768544 onboard_1.4.1-2ubuntu1mint3.tar.xz
+Original-Maintainer: MATE Packaging Team <pkg-mate-team@lists.alioth.debian.org>
+
+Package: plymouth
+Format: 3.0 (native)
+Binary: plymouth, plymouth-x11, libplymouth4, libplymouth-dev, plymouth-label, plymouth-themes, plymouth-theme-ubuntu-logo, plymouth-theme-ubuntu-text
+Architecture: any
+Version: 0.9.3+mint2
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Uploaders: Sjoerd Simons <sjoerd@debian.org>
+Homepage: http://www.freedesktop.org/wiki/Software/Plymouth
+Standards-Version: 4.0.0
+Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/plymouth.git/
+Vcs-Git: https://anonscm.debian.org/git/collab-maint/plymouth.git
+Build-Depends: debhelper (>= 9.20160114~), dh-autoreconf, dh-systemd, docbook-xsl, libdrm-dev, libgtk-3-dev (>= 3.14.0), libpango1.0-dev, libpng-dev, libudev-dev, pkg-config, systemd, xsltproc
+Package-List:
+ libplymouth-dev deb libdevel optional arch=any
+ libplymouth4 deb libs optional arch=any
+ plymouth deb misc optional arch=linux-any
+ plymouth-label deb misc optional arch=linux-any
+ plymouth-theme-ubuntu-logo deb misc optional arch=linux-any
+ plymouth-theme-ubuntu-text deb misc optional arch=linux-any
+ plymouth-themes deb misc optional arch=linux-any
+ plymouth-x11 deb misc optional arch=linux-any
+Priority: optional
+Section: misc
+Directory: pool/upstream/p/plymouth
+Files: 
+ 7a89a90cee7a58c3cdb40eda0d602149 1523 plymouth_0.9.3+mint2.dsc
+ ade86bba4e03b532ee24a53312e0fc00 1162232 plymouth_0.9.3+mint2.tar.xz
+Checksums-Sha1: 
+ db6712ff40eb3711ece5fd7defbba5c68eb5acd7 1523 plymouth_0.9.3+mint2.dsc
+ df44144c95c1452924c2e0a5e3de9dba8acbd47c 1162232 plymouth_0.9.3+mint2.tar.xz
+Checksums-Sha256: 
+ 6736acd84794b17255aa5f11b7db5ca4e020fe090748f3485e64b2e22882ba05 1523 plymouth_0.9.3+mint2.dsc
+ c2abf68f753ac7793506dc98061beed361105fdc4cdb38096075bff9470f328a 1162232 plymouth_0.9.3+mint2.tar.xz
+Original-Maintainer: Laurent Bigonville <bigon@debian.org>
+
+Package: redshift
+Format: 3.0 (native)
+Binary: redshift, redshift-gtk, gtk-redshift
+Architecture: any all
+Version: 1.11-1ubuntu1mint1
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Uploaders: Franziska Lichtblau <rhalina@old-forest.org>
+Homepage: http://jonls.dk/redshift/
+Standards-Version: 3.9.3
+Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/redshift.git
+Vcs-Git: https://anonscm.debian.org/git/collab-maint/redshift.git
+Build-Depends: debhelper (>= 9), autotools-dev (>= 20100122.1~), pkg-config (>= 0.25), dpkg-dev (>= 1.16.1~), libxcb-randr0-dev, libxxf86vm-dev, libgconf2-dev, python3, libxext-dev, libdrm-dev, intltool, dh-python, dh-autoreconf
+Package-List:
+ gtk-redshift deb x11 extra arch=all
+ redshift deb x11 extra arch=any
+ redshift-gtk deb x11 extra arch=all
+Priority: extra
+Section: x11
+Directory: pool/upstream/r/redshift
+Files: 
+ c2fd8b069db325c83dfd305c6a6ef5a0 1177 redshift_1.11-1ubuntu1mint1.dsc
+ 6fba54462266207d55d7b149065f7f61 386028 redshift_1.11-1ubuntu1mint1.tar.xz
+Checksums-Sha1: 
+ 4eee03afa524c6b9a2a61cbbf73b8a55724ff721 1177 redshift_1.11-1ubuntu1mint1.dsc
+ 866ff93ecda961ef66f4f2a5e033d46ade5d43af 386028 redshift_1.11-1ubuntu1mint1.tar.xz
+Checksums-Sha256: 
+ ab6fb54a1e2ff3295b31aca40a5820a6605483c4fcbe85bc42ae8d60350d119d 1177 redshift_1.11-1ubuntu1mint1.dsc
+ af660584d589a314e0240611da7ce927d47e4e850470c145c686205e78fdffa8 386028 redshift_1.11-1ubuntu1mint1.tar.xz
+Original-Maintainer: Ritesh Raj Sarraf <rrs@debian.org>
+
+Package: simple-scan
+Format: 3.0 (native)
+Binary: simple-scan
+Architecture: linux-any
+Version: 3.28.0-0ubuntu1
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Homepage: https://launchpad.net/simple-scan
+Standards-Version: 4.1.1
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-desktop/simple-scan/ubuntu
+Build-Depends: debhelper (>= 10.3), gettext, gnome-pkg-tools (>= 0.10), itstool, libcairo2-dev, libcolord-dev, libglib2.0-dev (>= 2.32), libgtk-3-dev, libgdk-pixbuf2.0-dev (>= 2.31.1), libgusb-dev, libpackagekit-glib2-dev (>= 1.1.5), libsane-dev, libwebp-dev, meson, python-scour, valac (>= 0.22), zlib1g-dev (>= 1.2.7)
+Package-List:
+ simple-scan deb gnome optional arch=linux-any
+Priority: optional
+Section: gnome
+Directory: pool/upstream/s/simple-scan
+Files: 
+ df4927cc4e7a977c736a12e91f426067 1070 simple-scan_3.28.0-0ubuntu1.dsc
+ dc055a17f37c1dfa436bf6b40e7a8eae 507520 simple-scan_3.28.0-0ubuntu1.tar.xz
+Checksums-Sha1: 
+ a31cfcb3037c72ab306dbd0ad694468b1f41da2b 1070 simple-scan_3.28.0-0ubuntu1.dsc
+ cde0bd3243167d7b06f2ffe56426f1167a60e2b6 507520 simple-scan_3.28.0-0ubuntu1.tar.xz
+Checksums-Sha256: 
+ 1c9669d73d9768f7fbf3d8f05aaa92153e0ae7f7259e08bd839fcb51bb809062 1070 simple-scan_3.28.0-0ubuntu1.dsc
+ e3ab0ad512c5bf7e0929f4418a4241af4679fca26ba2f7888341940bd0056460 507520 simple-scan_3.28.0-0ubuntu1.tar.xz
+Original-Maintainer: Jörg Frings-Fürst <debian@jff.email>
+
+Package: synaptic
+Format: 3.0 (native)
+Binary: synaptic
+Architecture: any
+Version: 0.84.3linuxmint3+tricia
+Maintainer: Michael Vogt <mvo@debian.org>
+Homepage: http://www.nongnu.org/synaptic/
+Standards-Version: 3.7.2.2
+Vcs-Git: https://github.com/mvo5/synaptic
+Build-Depends: debhelper (>= 8), libapt-pkg-dev (>= 0.8.16~exp12), gettext, libgtk-3-dev, libvte-2.91-dev, rarian-compat, intltool, xmlto, libsm-dev, sharutils, dpatch, lsb-release, dpkg (>= 1.13.9), libept-dev (>= 1.0.5), dh-autoreconf, libxapp-dev
+Build-Conflicts: librpm-dev
+Package-List:
+ synaptic deb admin optional arch=any
+Priority: optional
+Section: admin
+Directory: pool/upstream/s/synaptic
+Files: 
+ e0204bdbf234695c70a834a66c2a1b2a 916 synaptic_0.84.3linuxmint3+tricia.dsc
+ c0bee7c4cdcbce248e874fb93a8d4bdf 2293636 synaptic_0.84.3linuxmint3+tricia.tar.xz
+Checksums-Sha1: 
+ 1bd5ae986141140c70ec966ade66ee6b6c071e71 916 synaptic_0.84.3linuxmint3+tricia.dsc
+ 7114af80fe6a0128287bc6a26c48f9f2d730b240 2293636 synaptic_0.84.3linuxmint3+tricia.tar.xz
+Checksums-Sha256: 
+ 61cea4908132f459d52a66128f4bfee0b656db1da6592653d82b86815bc012f8 916 synaptic_0.84.3linuxmint3+tricia.dsc
+ 9ed2e00e6bb289147d79850137c0029fd61274dd39166eb3cf00f377bdc30561 2293636 synaptic_0.84.3linuxmint3+tricia.tar.xz
+
+Package: ubiquity
+Format: 3.0 (native)
+Binary: ubiquity, ubiquity-ubuntu-artwork, ubiquity-frontend-gtk, ubiquity-frontend-kde, ubiquity-frontend-debconf, oem-config, oem-config-gtk, oem-config-kde, oem-config-debconf, oem-config-check, oem-config-udeb, oem-config-remaster
+Architecture: any all
+Version: 18.04.1+linuxmint15
+Maintainer: Linux Mint Installer Team <ubuntu-installer@lists.ubuntu.com>
+Uploaders: Colin Watson <cjwatson@ubuntu.com>, Evan Dandrea <ev@ubuntu.com>
+Standards-Version: 3.9.4
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-installer/ubiquity/trunk
+Testsuite: autopkgtest
+Testsuite-Triggers: humanity-icon-theme, python3-mock, xvfb
+Build-Depends: adwaita-icon-theme, apt, autopoint, bf-utf-source, check, dash, dctrl-tools, debconf-utils, debhelper (>= 9), devio, dh-autoreconf, dh-di (>= 3), dh-systemd, dpkg-dev (>= 1.15.7), gir1.2-nma-1.0, gir1.2-soup-2.4, gir1.2-timezonemap-1.0, gir1.2-webkit2-4.0, gir1.2-xkl-1.0, gobject-introspection, imagemagick, intltool (>= 0.40.0), intltool-debian (>= 0.30+20040212), iso-codes, isoquery, keymapper (>= 0.5.3-7), libbogl-dev, libcairo2-dev, libdebconfclient0-dev (>= 0.68), libdebian-installer4-dev (>= 0.76), libgirepository1.0-dev, libglib2.0-dev, libgtk-3-dev (>= 3.20), libido3-0.1-dev, libindicator3-dev, libiw-dev (>= 27+28pre9), liblocale-gettext-perl, libparted-dev (>= 2.2), librsvg2-bin, libsubunit-dev, linux-base (>= 3.2), locales, pep8, pkg-config, po-debconf (>= 1.0), pyflakes3 (>= 0.7.2), python-gi-dev, python-scour, python3-all (>= 3.1), python3-apt (>= 0.7.100.3~), python3-cairo, python3-dbus, python3-debconf, python3-gi, python3-gi-cairo, python3-icu (>= 1.0), python3-mock (>= 0.7.0), python3-pam, rename, tzdata, ubuntu-artwork, udev, wget, xkb-data (>= 0.9), xkb-data-i18n, xvfb, gawk
+Package-List:
+ oem-config deb admin optional arch=all
+ oem-config-check udeb debian-installer standard arch=all
+ oem-config-debconf deb admin optional arch=all
+ oem-config-gtk deb admin optional arch=all
+ oem-config-kde deb admin optional arch=all
+ oem-config-remaster deb admin optional arch=all
+ oem-config-udeb udeb debian-installer optional arch=all
+ ubiquity deb admin optional arch=any
+ ubiquity-frontend-debconf deb admin optional arch=any
+ ubiquity-frontend-gtk deb admin optional arch=amd64,arm64,armhf,i386,powerpc,ppc64el
+ ubiquity-frontend-kde deb admin optional arch=all
+ ubiquity-ubuntu-artwork deb admin optional arch=all
+Priority: optional
+Section: admin
+Directory: pool/upstream/u/ubiquity
+Files: 
+ fdeb34457893e4b94015d1ffffc75a6e 2731 ubiquity_18.04.1+linuxmint15.dsc
+ 0a576cddece65120c52541c080180bc0 40499368 ubiquity_18.04.1+linuxmint15.tar.xz
+Checksums-Sha1: 
+ f2abc1f35740f5c6f9ed4eb3a439500d8a164d3c 2731 ubiquity_18.04.1+linuxmint15.dsc
+ e71fe92779491a68c9d6da31838bb1786a5bea98 40499368 ubiquity_18.04.1+linuxmint15.tar.xz
+Checksums-Sha256: 
+ 51d06dcd04048dc7b4f8f69460b7ad16a9d9f071842fd5dd238eaa4b794658ce 2731 ubiquity_18.04.1+linuxmint15.dsc
+ 1d1fb32603dfd55da58da91f341059faa8b2b94d00cedc9a6d17aa7426cc6574 40499368 ubiquity_18.04.1+linuxmint15.tar.xz
+
+Package: xfce4-panel
+Format: 3.0 (native)
+Binary: xfce4-panel, xfce4-panel-dev, libxfce4panel-2.0-4, libxfce4panel-2.0-dev
+Architecture: any
+Version: 4.14.1-0ubuntu1~18.04mint1
+Maintainer: Xubuntu Developers <xubuntu-devel@lists.ubuntu.com>
+Uploaders: Yves-Alexis Perez <corsac@debian.org>
+Homepage: https://www.xfce.org/
+Standards-Version: 4.4.0
+Vcs-Browser: https://salsa.debian.org/xfce-team/desktop/xfce4-panel
+Vcs-Git: https://salsa.debian.org/xfce-team/desktop/xfce4-panel.git
+Build-Depends: debhelper-compat (= 11), gtk-doc-tools, intltool, libcairo2-dev, libexo-2-dev, libgarcon-1-dev, libgarcon-gtk3-1-dev, libglib2.0-dev, libgtk-3-dev, libgtk2.0-dev, libwnck-3-dev, libxfce4ui-2-dev (>= 4.13.0), libxfce4util-dev (>= 4.13.0), libxfconf-0-dev (>= 4.13.2), xfce4-dev-tools, dh-autoreconf
+Package-List:
+ libxfce4panel-2.0-4 deb libs optional arch=any
+ libxfce4panel-2.0-dev deb libdevel optional arch=any
+ xfce4-panel deb xfce optional arch=any
+ xfce4-panel-dev deb xfce optional arch=any
+Priority: optional
+Section: xfce
+Directory: pool/upstream/x/xfce4-panel
+Files: 
+ a8df2e4e861dc94a28c93182bde8d406 1416 xfce4-panel_4.14.1-0ubuntu1~18.04mint1.dsc
+ 1b689febb897d244c2765d9480236af4 1100568 xfce4-panel_4.14.1-0ubuntu1~18.04mint1.tar.xz
+Checksums-Sha1: 
+ 5e828aa40fd636cfe0c265aea0f117ec7a1b0cf5 1416 xfce4-panel_4.14.1-0ubuntu1~18.04mint1.dsc
+ 6a212a354d53f2914b8029f6d73af686ddd46118 1100568 xfce4-panel_4.14.1-0ubuntu1~18.04mint1.tar.xz
+Checksums-Sha256: 
+ bf7d6ac18c7023f4228f5a653eb7e47f78f54276a93fc33b56e166f4a16388aa 1416 xfce4-panel_4.14.1-0ubuntu1~18.04mint1.dsc
+ d471af55616b45e690f450d571aa03b1c855b62eae86574da411ad6dc3bb57ce 1100568 xfce4-panel_4.14.1-0ubuntu1~18.04mint1.tar.xz
+Original-Maintainer: Debian Xfce Maintainers <debian-xfce@lists.debian.org>
+
+Package: xfce4-power-manager
+Format: 3.0 (native)
+Binary: xfce4-power-manager, xfce4-power-manager-data, xfce4-power-manager-plugins
+Architecture: any all
+Version: 1.6.5-2~18.04mint1
+Maintainer: Debian Xfce Maintainers <debian-xfce@lists.debian.org>
+Uploaders: Yves-Alexis Perez <corsac@debian.org>
+Homepage: https://goodies.xfce.org/projects/applications/xfce4-power-manager
+Standards-Version: 4.4.0
+Vcs-Browser: https://salsa.debian.org/xfce-team/desktop/xfce4-power-manager
+Vcs-Git: https://salsa.debian.org/xfce-team/desktop/xfce4-power-manager.git
+Build-Depends: debhelper-compat (= 11), dh-autoreconf, dpkg-dev (>= 1.16.1), intltool, libglib2.0-dev, libgtk-3-dev (>= 3.14), libnotify-dev, libpolkit-gobject-1-dev, libsystemd-dev [linux-any], libupower-glib-dev (>= 0.99), libx11-dev, libxext-dev, libxfce4panel-2.0-dev (>= 4.12), libxfce4ui-2-dev (>= 4.13), libxfconf-0-dev (>= 4.10.0), pkg-config, xfce4-dev-tools
+Package-List:
+ xfce4-power-manager deb xfce optional arch=any
+ xfce4-power-manager-data deb xfce optional arch=all
+ xfce4-power-manager-plugins deb xfce optional arch=any
+Priority: optional
+Section: xfce
+Directory: pool/upstream/x/xfce4-power-manager
+Files: 
+ c5997e258e206787b61d838b2d5dafff 1433 xfce4-power-manager_1.6.5-2~18.04mint1.dsc
+ d29e5e8c05f811182b67c393cf065ad9 945164 xfce4-power-manager_1.6.5-2~18.04mint1.tar.xz
+Checksums-Sha1: 
+ 7345cebbc6fbfe6edb76f66928294e15efd2ff39 1433 xfce4-power-manager_1.6.5-2~18.04mint1.dsc
+ e36efe2ff87398189bd06493b29645a4bd6ac699 945164 xfce4-power-manager_1.6.5-2~18.04mint1.tar.xz
+Checksums-Sha256: 
+ eb9209785d33eca239efc7d877b2a6c2608fc5d0de6420d5c776ae33bab6b17d 1433 xfce4-power-manager_1.6.5-2~18.04mint1.dsc
+ 37695b5f60cdcf536054a310c895dd25d98ce7599eb138525f8c1e53318e5419 945164 xfce4-power-manager_1.6.5-2~18.04mint1.tar.xz
+
+Package: xfce4-pulseaudio-plugin
+Format: 3.0 (native)
+Binary: xfce4-pulseaudio-plugin
+Architecture: any
+Version: 0.4.2-1~18.04mint1
+Maintainer: Debian Xfce Maintainers <debian-xfce@lists.debian.org>
+Uploaders: Yves-Alexis Perez <corsac@debian.org>, Unit 193 <unit193@ubuntu.com>, Sean Davis <smd.seandavis@gmail.com>
+Homepage: https://goodies.xfce.org/projects/panel-plugins/xfce4-pulseaudio-plugin
+Standards-Version: 4.4.0
+Vcs-Browser: https://salsa.debian.org/xfce-team/goodies/xfce4-pulseaudio-plugin
+Vcs-Git: https://salsa.debian.org/xfce-team/goodies/xfce4-pulseaudio-plugin.git
+Build-Depends: debhelper-compat (= 11), dh-autoreconf, intltool, libdbus-glib-1-dev, libexo-1-dev, libglib2.0-dev, libgtk-3-dev, libwnck-3-dev, libkeybinder-3.0-dev, libnotify-dev, libpulse-dev, libxfce4panel-2.0-dev, libxfce4ui-2-dev, libxfce4util-dev, libxfconf-0-dev, xfce4-dev-tools
+Package-List:
+ xfce4-pulseaudio-plugin deb xfce optional arch=any
+Priority: optional
+Section: xfce
+Directory: pool/upstream/x/xfce4-pulseaudio-plugin
+Files: 
+ 494f691c78ae643045f7fac6cb0d653a 1290 xfce4-pulseaudio-plugin_0.4.2-1~18.04mint1.dsc
+ a38f764e5f510ef9e62bd5d304a7d363 341404 xfce4-pulseaudio-plugin_0.4.2-1~18.04mint1.tar.xz
+Checksums-Sha1: 
+ 3aa2434a0222ae3a78bb4fcfce93e9226283d215 1290 xfce4-pulseaudio-plugin_0.4.2-1~18.04mint1.dsc
+ 3d1b360f623a70d8286e2c804d44d0543cdee2c6 341404 xfce4-pulseaudio-plugin_0.4.2-1~18.04mint1.tar.xz
+Checksums-Sha256: 
+ 899e3369a3c36c23053a5a70479bd9732a7a27bc3acbe072c4ca29a7e3ab7b7a 1290 xfce4-pulseaudio-plugin_0.4.2-1~18.04mint1.dsc
+ 72b23f4ca5c776b159529df9b68d26abee67bbf774a84c9067ae819554252e90 341404 xfce4-pulseaudio-plugin_0.4.2-1~18.04mint1.tar.xz
+
+Package: yelp
+Format: 3.0 (quilt)
+Binary: yelp, libyelp0, libyelp-dev
+Architecture: any
+Version: 3.26.0-1ubuntu2mint1
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Uploaders: Laurent Bigonville <bigon@debian.org>, Michael Biebl <biebl@debian.org>
+Homepage: https://wiki.gnome.org/Apps/Yelp
+Standards-Version: 4.1.1
+Vcs-Browser: https://anonscm.debian.org/viewvc/pkg-gnome/desktop/unstable/yelp
+Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/desktop/unstable/yelp
+Build-Depends: appstream-util, debhelper (>= 10), gnome-pkg-tools (>= 0.10), docbook-to-man, intltool (>= 0.41.0), itstool (>= 1.2.0), gtk-doc-tools, libglib2.0-doc, libgtk-3-doc, libglib2.0-dev (>= 2.38.0), libgtk-3-dev (>= 3.13.3), libxml2-dev (>= 2.6.5), libxslt1-dev (>= 1.1.4), zlib1g-dev, libbz2-dev, liblzma-dev (>= 4.9), libwebkit2gtk-4.0-dev (>= 2.15.1), libsqlite3-dev, yelp-xsl (>= 3.12.0)
+Package-List:
+ libyelp-dev deb libdevel optional arch=any
+ libyelp0 deb libs optional arch=any
+ yelp deb gnome optional arch=any
+Priority: optional
+Section: gnome
+Directory: pool/upstream/y/yelp
+Files: 
+ 2b3421e1694c137655bc37d0ff288a3d 1666 yelp_3.26.0-1ubuntu2mint1.dsc
+ 7532e9d63bc9f970c1cda89537b0c305 1382476 yelp_3.26.0.orig.tar.xz
+ 4cfaf01f966a5458addc21a5d631edf7 16148 yelp_3.26.0-1ubuntu2mint1.debian.tar.xz
+Checksums-Sha1: 
+ c9c62843a5640918391a02db75104e8a797147bf 1666 yelp_3.26.0-1ubuntu2mint1.dsc
+ a086f65f43e1c9e5878177660be1bbc3bd99c824 1382476 yelp_3.26.0.orig.tar.xz
+ d20f64d53fcd5ba1f45c46f13a7efd058af310dd 16148 yelp_3.26.0-1ubuntu2mint1.debian.tar.xz
+Checksums-Sha256: 
+ 1a4bd8421152b7e9608701454f9d9d9c3d528c9432257af01b109bdac16607d5 1666 yelp_3.26.0-1ubuntu2mint1.dsc
+ e4cb02ed2f44cfec3c352c957f8a461d9689cbc06eb3b503a58ffe92e1753f1b 1382476 yelp_3.26.0.orig.tar.xz
+ b39dd542a0ed4d9ddc0654239bead73193fe2793a9c1c7327801e1bc2ba7145b 16148 yelp_3.26.0-1ubuntu2mint1.debian.tar.xz
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+
