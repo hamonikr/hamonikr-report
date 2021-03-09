@@ -1,3 +1,12 @@
+mintreport (1.2.1+hamonikr2) entjin; urgency=medium
+
+  * Update usr/share/linuxmint/mintreport/reports/071_new_major_release/MintReportInfo.py
+  * Update usr/share/linuxmint/mintreport/reports/080_release-eol/MintReportInfo.py
+    - change os.path to /etc/hamonikr/info
+  * Removed usr/share/linuxmint/mintreport/reports/045_xappstatusapplet-missing
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 09 Mar 2021 10:46:57 +0900
+
 mintreport (1.2.1+hamonikr1) jin; urgency=medium
 
   * Rebuild for HamoniKR 4.0

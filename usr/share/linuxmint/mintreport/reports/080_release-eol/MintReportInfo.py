@@ -46,12 +46,12 @@ class Report(InfoReport):
         self.days_before_eol = (self.eol_date - datetime.now()).days
         if self.days_before_eol < 90:
             if self.days_before_eol > 0:
-                self.title = _("Your version of Linux Mint will soon reach End-Of-Life (EOL)")
+                self.title = _("Your version of HamoniKR will soon reach End-Of-Life (EOL)")
                 self.description = ngettext('It will stop receiving support and updates in a day.', \
                                             'It will stop receiving support and updates in {num_days} days.', self.days_before_eol) \
                                             .format(num_days=self.days_before_eol)
             else:
-                self.title = _("Your version of Linux Mint is no longer supported")
+                self.title = _("Your version of HamoniKR is no longer supported")
                 self.description = ngettext('It reached End-Of-Life (EOL) yesterday.', \
                                             'It reached End-Of-Life (EOL) {num_days} days ago.', self.days_before_eol) \
                                             .format(num_days=(self.days_before_eol * -1))
@@ -63,7 +63,7 @@ class Report(InfoReport):
         # Return the descriptions
         descriptions = []
         descriptions.append(self.description)
-        descriptions.append(_("Visit %s to find information about newer releases.") % "<a href='https://www.linuxmint.com'>https://www.linuxmint.com</a>")
+        descriptions.append(_("Visit %s to find information about newer releases.") % "<a href='https://hamonikr.org'>https://www.hamonikr.org</a>")
         return descriptions
 
     def get_actions(self):
