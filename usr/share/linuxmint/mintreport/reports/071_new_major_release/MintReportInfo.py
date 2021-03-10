@@ -14,7 +14,7 @@ class Report(InfoReport):
 
         gettext.install("mintreport", "/usr/share/locale", names="ngettext")
 
-        self.title = _("A new version of Linux Mint is available")
+        self.title = _("A new version of HamoniKR is available")
         self.icon = "mintupdate-type-package-symbolic"
         self.has_ignore_button = True
 
@@ -25,8 +25,8 @@ class Report(InfoReport):
         rel_edition = None
         rel_codename = None
         rel_arch = subprocess.getoutput("dpkg --print-architecture")
-        if os.path.exists("/etc/linuxmint/info"):
-            with open("/etc/linuxmint/info", encoding="utf-8") as info:
+        if os.path.exists("/etc/hamonikr/info"):
+            with open("/etc/hamonikr/info", encoding="utf-8") as info:
                 for line in info:
                     line = line.strip()
                     if "EDITION=" in line:
@@ -47,7 +47,7 @@ class Report(InfoReport):
     def get_descriptions(self):
         # Return the descriptions
         descriptions = []
-        descriptions.append(_("Visit %s for the latest announcements.") % "<a href='https://blog.linuxmint.com'>https://blog.linuxmint.com</a>")
+        descriptions.append(_("Visit %s for the latest announcements.") % "<a href='https://hamonikr.org'>https://hamonikr.org</a>")
         return descriptions
 
     def get_actions(self):
