@@ -1,10 +1,16 @@
+hamonikr-report (2.0.0) entjin; urgency=medium
+
+  * Changed pkg name as hamonikr-report
+    - remove conflict pkg name with mintreport
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 10 Mar 2021 16:36:48 +0900
+
 mintreport (1.2.3+hamonikr2) entjin; urgency=medium
 
   * only version up
     - because linuxmint 20.1 mintreport version 1.2.3
 
  -- HamoniKR <pkg@hamonikr.org>  Wed, 10 Mar 2021 15:11:32 +0900
-
 
 mintreport (1.2.1+hamonikr2) entjin; urgency=medium
 

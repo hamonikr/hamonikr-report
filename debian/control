@@ -1,11 +1,11 @@
-Source: mintreport
+Source: hamonikr-report
 Section: admin
 Priority: optional
-Maintainer: Linux Mint <root@linuxmint.com>
+Maintainer: Kevin Kim <root@hamonikr.org>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.5
 
-Package: mintreport
+Package: hamonikr-report
 Architecture: all
 Depends: python3,
          python3-gi,
@@ -17,5 +17,7 @@ Depends: python3,
          mint-common,
          xapps-common,
          ${misc:Depends},
-Description: Troubleshooting tool for Linux Mint
+Conflicts: 
+Replaces: mintreport
+Description: Troubleshooting tool for HamoniKR
  Reports issues and important information about the operating system.
