@@ -108,3 +108,4 @@ Encoding=UTF-8
 Categories=Application;System;Settings;
 StartupNotify=false
 NotShowIn=KDE;
+Keywords=report;리포트;

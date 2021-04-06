@@ -1,3 +1,14 @@
+hamonikr-report (2.0.1) entjin; urgency=medium
+
+  * Changed usr/share/linuxmint/mintreport/reports/070_new-release/MintReportInfo.py
+    - Remove new linuxmint release info for HamoniKR
+    - Changed as /etc/hamonikr/info
+  * TODO : /usr/bin/mint-release-upgrade edit for hamonikr
+  * Update usr/share/applications/mintreport.desktop
+    - Add Keywords section
+
+ -- HamoniKR <pkg@hamonikr.org>  Tue, 06 Apr 2021 11:18:03 +0900
+
 hamonikr-report (2.0.0) entjin; urgency=medium
 
   * Changed pkg name as hamonikr-report
