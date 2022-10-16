@@ -23,6 +23,7 @@ class Report(InfoReport):
         self.rel_target = None
         rel_edition = None
         rel_codename = None
+        rel_relno = None
         if os.path.exists("/etc/hamonikr/info"):
             with open("/etc/hamonikr/info", encoding="utf-8") as info:
                 for line in info:
@@ -31,6 +32,8 @@ class Report(InfoReport):
                         rel_edition = line.split('=')[1].replace('"', '').split()[0]
                     if "CODENAME=" in line:
                         rel_codename = line.split('=')[1].replace('"', '').split()[0]
+                    if "RELEASE=" in line:
+                        rel_relno = line.split('=')[1].replace('"', '').split()[0]                        
         # When there is a new version of the code name
         if rel_edition is not None and rel_codename is not None:
             rel_path = "/usr/share/hamonikr-upgrade-info/%s/info" % rel_codename
