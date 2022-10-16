@@ -1,0 +1,68 @@
+#!/usr/bin/python3
+
+DOMAIN = "hamonikrreport"
+PATH = "/usr/share/locale"
+
+import os
+import gettext
+from mintcommon import additionalfiles
+
+os.environ['LANGUAGE'] = "en_US.UTF-8"
+gettext.install(DOMAIN, PATH)
+
+prefix = "[Desktop Entry]\n"
+
+suffix = """Exec=hamonikrreport
+Icon=hamonikrreport
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=System;
+StartupNotify=false
+NotShowIn=KDE;
+"""
+
+additionalfiles.generate(DOMAIN, PATH, "usr/share/applications/hamonikrreport.desktop", prefix, _("System Reports"), _("Troubleshoot problems"), suffix)
+
+prefix = "[Desktop Entry]\n"
+
+suffix = """Exec=hamonikrreport-tray
+Icon=hamonikrreport
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=System;
+StartupNotify=false
+NoDisplay=true
+"""
+
+additionalfiles.generate(DOMAIN, PATH, "usr/share/applications/hamonikrreport-tray.desktop", prefix, _("System Reports"), _("Troubleshoot problems"), suffix)
+
+prefix = "[Desktop Entry]\n"
+
+suffix = """Exec=hamonikrreport
+Icon=hamonikrreport
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=System;
+X-KDE-StartupNotify=false
+OnlyShowIn=KDE;
+"""
+
+additionalfiles.generate(DOMAIN, PATH, "usr/share/applications/kde4/hamonikrreport.desktop", prefix, _("System Reports"), _("Troubleshoot problems"), suffix, genericName=_("Troubleshooting Tool"))
+
+prefix = """[Desktop Entry]
+Encoding=UTF-8\n"""
+
+suffix = """Exec=hamonikrreport-tray
+Icon=hamonikrreport
+Terminal=false
+Type=Application
+Categories=System;
+X-GNOME-Autostart-Delay=40
+X-MATE-Autostart-Delay=40
+"""
+
+additionalfiles.generate(DOMAIN, PATH, "etc/xdg/autostart/hamonikrreport.desktop", prefix, _("System Reports"), _("Troubleshoot problems"), suffix)
+

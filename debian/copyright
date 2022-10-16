@@ -1,10 +1,10 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: mintreport
-Upstream-Contact: Linux Mint <root@linuxmint.com>
-Source: https://github.com/linuxmint/mintreport
+Upstream-Name: hamonikrreport
+Upstream-Contact: HamoniKR <pkg@hamonikr.org>
+Source: https://github.com/hamonikr/hamonikrreport
 
 Files: *
-Copyright: 2017 Linux Mint <root@linuxmint.com>
+Copyright: 2022 HamoniKR <pkg@hamonikr.org>
 License: GPL-3+
  This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by

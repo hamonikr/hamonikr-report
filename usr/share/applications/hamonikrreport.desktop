@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=System Reports
+Name[ko]=시스템 보고서
+Comment=Troubleshoot problems
+Comment[ko]=문제 해결을 도와줍니다
+Exec=hamonikrreport
+Icon=hamonikrreport
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=System;
+StartupNotify=false
+NotShowIn=KDE;
