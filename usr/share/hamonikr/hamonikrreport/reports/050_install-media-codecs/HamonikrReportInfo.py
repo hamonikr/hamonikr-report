@@ -21,10 +21,10 @@ class Report(InfoReport):
     def is_pertinent(self):
         # Defines whether this report should show up
         installed_codecs_pkg = subprocess.getoutput("dpkg-query -W --showformat='${db:Status-Status}' mint-meta-codecs 2>&1")
-        if installed_codecs_pkg == "installed":
-            return True
-        else:
+        if str(installed_codecs_pkg) == "installed":
             return False
+        else:
+            return True
 
     def get_descriptions(self):
         # Return the descriptions
