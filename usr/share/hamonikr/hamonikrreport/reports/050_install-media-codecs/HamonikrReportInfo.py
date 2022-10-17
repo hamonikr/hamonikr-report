@@ -1,6 +1,7 @@
 import os
 import gettext
 import gi
+import subprocess
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk
@@ -19,7 +20,7 @@ class Report(InfoReport):
 
     def is_pertinent(self):
         # Defines whether this report should show up
-        installed_codecs_pkg = os.system("dpkg-query -W --showformat='${db:Status-Status}' mint-meta-codecs  2>&1")
+        installed_codecs_pkg = subprocess.getoutput("dpkg-query -W --showformat='${db:Status-Status}' mint-meta-codecs 2>&1")
         if installed_codecs_pkg == "installed":
             return True
         else:

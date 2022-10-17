@@ -1,3 +1,10 @@
+hamonikrreport (1.0.3) taebaek; urgency=medium
+
+  * Fixed mint-meta-codecs check
+   - Changed to subprocess.getoutput
+
+ -- HamoniKR <pkg@hamonikr.org>  Mon, 17 Oct 2022 12:15:32 +0900
+
 hamonikrreport (1.0.2) taebaek; urgency=medium
 
   * Update new major release check
