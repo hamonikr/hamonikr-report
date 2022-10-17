@@ -19,7 +19,8 @@ class Report(InfoReport):
 
     def is_pertinent(self):
         # Defines whether this report should show up
-        if os.path.exists("/usr/share/applications/mint-meta-codecs.desktop"):
+        installed_codecs_pkg = os.system("dpkg-query -W --showformat='${db:Status-Status}' mint-meta-codecs  2>&1")
+        if installed_codecs_pkg == "installed":
             return True
         else:
             return False

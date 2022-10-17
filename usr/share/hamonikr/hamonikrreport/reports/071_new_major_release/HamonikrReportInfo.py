@@ -24,6 +24,7 @@ class Report(InfoReport):
         self.rel_link = None
         rel_edition = None
         rel_codename = None
+        rel_release = None        
         rel_arch = subprocess.getoutput("dpkg --print-architecture")
         if os.path.exists("/etc/hamonikr/info"):
             with open("/etc/hamonikr/info", encoding="utf-8") as info:
@@ -33,16 +34,18 @@ class Report(InfoReport):
                         rel_edition = line.split('=')[1].replace('"', '').split()[0]
                     if "CODENAME=" in line:
                         rel_codename = line.split('=')[1].replace('"', '').split()[0]
+                    if "RELEASE=" in line:
+                        rel_release = line.split('=')[1].replace('"', '').split()[0]                                   
         if rel_edition is not None and rel_codename is not None and rel_arch is not None:
             # CODENAME-major 
             rel_path = "/usr/share/hamonikr-upgrade-info/%s-major/info" % rel_codename
             if os.path.exists(rel_path):
                 config = configparser.ConfigParser()
                 config.read(rel_path)
-                if rel_edition.lower() in config['general']['editions'] and rel_arch in config['general']['architectures']:
+                if rel_codename != config['general']['target_codename'] and rel_release > config['general']['release']:
                     self.rel_target = config['general']['target_name']
-                    self.rel_link = config['general']['link']
-                    return True
+                    self.rel_link = config['general']['link']                    
+                    return True                         
         return False
 
     def get_descriptions(self):
