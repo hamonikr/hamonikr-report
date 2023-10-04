@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-DOMAIN = "hamonikrreport"
+DOMAIN = "hamonikr-report"
 PATH = "/usr/share/locale"
 
 import os
@@ -12,8 +12,8 @@ gettext.install(DOMAIN, PATH)
 
 prefix = "[Desktop Entry]\n"
 
-suffix = """Exec=hamonikrreport
-Icon=hamonikrreport
+suffix = """Exec=hamonikr-report
+Icon=hamonikr-report
 Terminal=false
 Type=Application
 Encoding=UTF-8
@@ -22,12 +22,12 @@ StartupNotify=false
 NotShowIn=KDE;
 """
 
-additionalfiles.generate(DOMAIN, PATH, "usr/share/applications/hamonikrreport.desktop", prefix, _("System Reports"), _("Troubleshoot problems"), suffix)
+additionalfiles.generate(DOMAIN, PATH, "usr/share/applications/hamonikr-report.desktop", prefix, _("System Reports"), _("Troubleshoot problems"), suffix)
 
 prefix = "[Desktop Entry]\n"
 
-suffix = """Exec=hamonikrreport-tray
-Icon=hamonikrreport
+suffix = """Exec=hamonikr-report-tray
+Icon=hamonikr-report
 Terminal=false
 Type=Application
 Encoding=UTF-8
@@ -36,12 +36,12 @@ StartupNotify=false
 NoDisplay=true
 """
 
-additionalfiles.generate(DOMAIN, PATH, "usr/share/applications/hamonikrreport-tray.desktop", prefix, _("System Reports"), _("Troubleshoot problems"), suffix)
+additionalfiles.generate(DOMAIN, PATH, "usr/share/applications/hamonikr-report-tray.desktop", prefix, _("System Reports"), _("Troubleshoot problems"), suffix)
 
 prefix = "[Desktop Entry]\n"
 
-suffix = """Exec=hamonikrreport
-Icon=hamonikrreport
+suffix = """Exec=hamonikr-report
+Icon=hamonikr-report
 Terminal=false
 Type=Application
 Encoding=UTF-8
@@ -50,13 +50,13 @@ X-KDE-StartupNotify=false
 OnlyShowIn=KDE;
 """
 
-additionalfiles.generate(DOMAIN, PATH, "usr/share/applications/kde4/hamonikrreport.desktop", prefix, _("System Reports"), _("Troubleshoot problems"), suffix, genericName=_("Troubleshooting Tool"))
+additionalfiles.generate(DOMAIN, PATH, "usr/share/applications/kde4/hamonikr-report.desktop", prefix, _("System Reports"), _("Troubleshoot problems"), suffix, genericName=_("Troubleshooting Tool"))
 
 prefix = """[Desktop Entry]
 Encoding=UTF-8\n"""
 
-suffix = """Exec=hamonikrreport-tray
-Icon=hamonikrreport
+suffix = """Exec=hamonikr-report-tray
+Icon=hamonikr-report
 Terminal=false
 Type=Application
 Categories=System;
@@ -64,5 +64,5 @@ X-GNOME-Autostart-Delay=40
 X-MATE-Autostart-Delay=40
 """
 
-additionalfiles.generate(DOMAIN, PATH, "etc/xdg/autostart/hamonikrreport.desktop", prefix, _("System Reports"), _("Troubleshoot problems"), suffix)
+additionalfiles.generate(DOMAIN, PATH, "etc/xdg/autostart/hamonikr-report.desktop", prefix, _("System Reports"), _("Troubleshoot problems"), suffix)
 

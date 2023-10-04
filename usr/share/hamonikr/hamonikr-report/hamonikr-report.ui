@@ -267,7 +267,7 @@
                   <packing>
                     <property name="name">page1</property>
                     <property name="title" translatable="yes">System reports</property>
-                    <property name="icon_name">hamonikrreport-symbolic</property>
+                    <property name="icon_name">hamonikr-report-symbolic</property>
                   </packing>
                 </child>
                 <child>

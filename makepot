@@ -1,4 +1,4 @@
 #!/bin/bash
-intltool-extract --type=gettext/glade usr/share/hamonikr/hamonikrreport/hamonikrreport.ui
-xgettext --language=Python --keyword=_ --keyword=N_ --output=hamonikrreport.pot usr/lib/hamonikr/hamonikrreport/*.py generate_desktop_files usr/share/hamonikr/hamonikrreport/hamonikrreport.ui.h usr/share/hamonikr/hamonikrreport/reports/*/*.py
-rm -f usr/share/hamonikr/hamonikrreport/hamonikrreport.ui.h
+intltool-extract --type=gettext/glade usr/share/hamonikr/hamonikr-report/hamonikr-report.ui
+xgettext --language=Python --keyword=_ --keyword=N_ --output=hamonikr-report.pot usr/lib/hamonikr/hamonikr-report/*.py generate_desktop_files usr/share/hamonikr/hamonikr-report/hamonikr-report.ui.h usr/share/hamonikr/hamonikr-report/reports/*/*.py
+rm -f usr/share/hamonikr/hamonikr-report/hamonikr-report.ui.h

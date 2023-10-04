@@ -13,10 +13,10 @@ from gi.repository import Gtk, Gdk, Gio, XApp, GLib
 
 from common import idle, InfoReportContainer, INFO_DIR
 
-setproctitle.setproctitle("hamonikrreport-tray")
+setproctitle.setproctitle("hamonikr-report-tray")
 
 # i18n
-APP = 'hamonikrreport'
+APP = 'hamonikr-report'
 LOCALE_DIR = "/usr/share/locale"
 locale.bindtextdomain(APP, LOCALE_DIR)
 gettext.bindtextdomain(APP, LOCALE_DIR)
@@ -57,7 +57,7 @@ class MyApplication(Gtk.Application):
 
         try:
             self.status_icon = XApp.StatusIcon()
-            self.status_icon.set_name("hamonikrreport")
+            self.status_icon.set_name("hamonikr-report")
             self.status_icon.connect("activate", self.on_statusicon_activated)
             self.status_icon.set_secondary_menu(self.menu)
         except Exception as e:
@@ -69,7 +69,7 @@ class MyApplication(Gtk.Application):
 
     def on_statusicon_activated(self, icon, button, time):
         if button == Gdk.BUTTON_PRIMARY:
-            GLib.spawn_async(["/usr/bin/hamonikrreport"])
+            GLib.spawn_async(["/usr/bin/hamonikr-report"])
             self.status_icon.set_visible(False)
 
     def on_gtk_statusicon_activated(self, status_icon):
@@ -79,7 +79,7 @@ class MyApplication(Gtk.Application):
         self.menu.popup(None, None, None, None, button, time)
 
     def on_menu_show(self, widget):
-        GLib.spawn_async(["/usr/bin/hamonikrreport"])
+        GLib.spawn_async(["/usr/bin/hamonikr-report"])
 
     def on_menu_quit(self, widget):
         self.quit()
@@ -113,7 +113,7 @@ class MyApplication(Gtk.Application):
 
         if found_pertinent_report:
             self.status_icon.set_visible(True)
-            self.status_icon.set_icon_name("hamonikrreport-symbolic")
+            self.status_icon.set_icon_name("hamonikr-report-symbolic")
             self.status_icon.set_tooltip_text(_("Some system reports require your attention"))
         else:
             self.status_icon.set_visible(False)

@@ -14,10 +14,10 @@ class Report(InfoReport):
 
     def __init__(self):
 
-        gettext.install("hamonikrreport", "/usr/share/locale", names="ngettext")
+        gettext.install("hamonikr-report", "/usr/share/locale", names="ngettext")
 
         self.title = _("Install hardware drivers")
-        self.icon = "hamonikrreport-hardware-device-symbolic"
+        self.icon = "hamonikr-report-hardware-device-symbolic"
         self.has_ignore_button = True
 
     def get_cpu_name(self):

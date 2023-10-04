@@ -7,9 +7,9 @@ import threading
 
 from gi.repository import GObject
 
-DATA_DIR = "/usr/share/hamonikr/hamonikrreport"
+DATA_DIR = "/usr/share/hamonikr/hamonikr-report"
 INFO_DIR = os.path.join(DATA_DIR, "reports")
-TMP_DIR = "/tmp/hamonikrreport"
+TMP_DIR = "/tmp/hamonikr-report"
 
 # Used as a decorator to run things in the background
 def _async(func):

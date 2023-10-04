@@ -16,17 +16,17 @@ from gi.repository import Gtk, Gdk, GtkSource, Gio, XApp
 
 from common import _async, idle, InfoReportContainer, DATA_DIR, INFO_DIR
 
-setproctitle.setproctitle("hamonikrreport")
+setproctitle.setproctitle("hamonikr-report")
 
 # i18n
-APP = 'hamonikrreport'
+APP = 'hamonikr-report'
 LOCALE_DIR = "/usr/share/locale"
 locale.bindtextdomain(APP, LOCALE_DIR)
 gettext.bindtextdomain(APP, LOCALE_DIR)
 gettext.textdomain(APP)
 _ = gettext.gettext
 
-TMP_DIR = "/tmp/hamonikrreport"
+TMP_DIR = "/tmp/hamonikr-report"
 TMP_INFO_DIR = os.path.join(TMP_DIR, "reports")
 TMP_INXI_FILE = os.path.join(TMP_DIR, "inxi")
 
@@ -76,13 +76,13 @@ class HamonikrReportWindow():
 
         self._cache = None
         # Set the Glade file
-        gladefile = "/usr/share/hamonikr/hamonikrreport/hamonikrreport.ui"
+        gladefile = "/usr/share/hamonikr/hamonikr-report/hamonikr-report.ui"
         self.builder = Gtk.Builder()
         self.builder.set_translation_domain(APP)
         self.builder.add_from_file(gladefile)
         self.window = self.builder.get_object("main_window")
         self.window.set_title(_("System Reports"))
-        self.window.set_icon_name("hamonikrreport")
+        self.window.set_icon_name("hamonikr-report")
 
         self.stack = self.builder.get_object("crash_stack")
         self.spinner = self.builder.get_object("crash_spinner")
@@ -241,7 +241,7 @@ class HamonikrReportWindow():
         dlg = Gtk.AboutDialog()
         dlg.set_transient_for(self.window)
         dlg.set_title(_("About"))
-        dlg.set_program_name("hamonikrreport")
+        dlg.set_program_name("hamonikr-report")
         dlg.set_comments(_("System Reports"))
         try:
             h = open('/usr/share/common-licenses/GPL', encoding="utf-8")
@@ -255,9 +255,9 @@ class HamonikrReportWindow():
             print (e)
 
         dlg.set_version("__DEB_VERSION__")
-        dlg.set_icon_name("hamonikrreport")
-        dlg.set_logo_icon_name("hamonikrreport")
-        dlg.set_website("https://www.github.com/hamonikr/hamonikrreport")
+        dlg.set_icon_name("hamonikr-report")
+        dlg.set_logo_icon_name("hamonikr-report")
+        dlg.set_website("https://www.github.com/hamonikr/hamonikr-report")
         def close(w, res):
             if res == Gtk.ResponseType.CANCEL or res == Gtk.ResponseType.DELETE_EVENT:
                 w.destroy()

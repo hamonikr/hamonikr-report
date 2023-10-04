@@ -12,10 +12,10 @@ class Report(InfoReport):
 
     def __init__(self):
 
-        gettext.install("hamonikrreport", "/usr/share/locale", names="ngettext")
+        gettext.install("hamonikr-report", "/usr/share/locale", names="ngettext")
 
         self.title = _("Remove conflicting indicators")
-        self.icon = "hamonikrreport-symbolic"
+        self.icon = "hamonikr-report-symbolic"
         self.has_ignore_button = True
         self.indicator_path = None
         self.indicator_pkgname = None

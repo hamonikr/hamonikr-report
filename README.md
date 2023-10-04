@@ -10,12 +10,12 @@
  * 누락된 언어 지원 패키지 설치
  * 최신 장치 드라이버 유무 확인
 
-![hamonikrreport](./hamonikrreport.png)
+![hamonikr-report](./hamonikr-report.png)
 
 ## Build
 Get source code
 ```
-git clone https://github.com/hamonikr/hamonikrreport
+git clone https://github.com/hamonikr/hamonikr-report
 cd hamonikrreport
 ```
 
@@ -27,7 +27,7 @@ dpkg-buildpackage --no-sign
 Install
 ```
 cd ..
-sudo dpkg -i hamonikrreport*.deb
+sudo dpkg -i hamonikr-report*.deb
 ```
 
 ## License

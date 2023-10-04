@@ -12,7 +12,7 @@ class Report(InfoReport):
 
     def __init__(self):
 
-        gettext.install("hamonikrreport", "/usr/share/locale", names="ngettext")
+        gettext.install("hamonikr-report", "/usr/share/locale", names="ngettext")
 
         self.title = _("Install multimedia codecs")
         self.icon = "applications-multimedia-symbolic"

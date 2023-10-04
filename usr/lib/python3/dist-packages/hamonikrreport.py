@@ -12,7 +12,7 @@ class InfoReport(ABC):
 
     def __init__(self):
         self.title = ""
-        self.icon = "hamonikrreport-symbolic"
+        self.icon = "hamonikr-report-symbolic"
         self.has_ignore_button = False
 
     @abstractmethod

@@ -1,24 +1,6 @@
-hamonikrreport (1.0.3) taebaek; urgency=medium
+hamonikr-report (2.0.0) stable; urgency=medium
 
-  * Fixed mint-meta-codecs check
-   - Changed to subprocess.getoutput
+  * Release for HamoniKR 7.0
+   - Test in Linuxmint 21.2
 
- -- HamoniKR <pkg@hamonikr.org>  Mon, 17 Oct 2022 12:15:32 +0900
-
-hamonikrreport (1.0.2) taebaek; urgency=medium
-
-  * Update new major release check
-
- -- HamoniKR <pkg@hamonikr.org>  Mon, 17 Oct 2022 09:39:07 +0900
-
-hamonikrreport (1.0.1) taebaek; urgency=medium
-
-  * Update new release check
-
- -- HamoniKR <pkg@hamonikr.org>  Mon, 17 Oct 2022 09:07:23 +0900
-
-hamonikrreport (1.0.0) taebaek; urgency=medium
-
-  * Release in HamoniKR 6.0
-
- -- HamoniKR <pkg@hamonikr.org>  Mon, 17 Oct 2022 00:09:33 +0900
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 04 Oct 2023 14:10:39 +0900

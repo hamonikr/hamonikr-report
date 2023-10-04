@@ -1,13 +1,13 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=System Reports
-Name[ko]=시스템 리포트
+Name[ko]=시스템 보고서
 Comment=Troubleshoot problems
 Comment[ko]=문제 해결을 도와줍니다
-Exec=hamonikrreport-tray
-Icon=hamonikrreport
+Exec=hamonikr-report
+Icon=hamonikr-report
 Terminal=false
 Type=Application
+Encoding=UTF-8
 Categories=System;
-X-GNOME-Autostart-Delay=40
-X-MATE-Autostart-Delay=40
+StartupNotify=false
+NotShowIn=KDE;
