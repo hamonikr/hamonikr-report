@@ -18,5 +18,7 @@ Depends: python3,
          mint-common,
          xapps-common,
          ${misc:Depends},
+Replaces: hamonikrreport
+Conflicts: hamonikrreport
 Description: Troubleshooting tool for HamoniKR
  Reports issues and important information about the operating system.
