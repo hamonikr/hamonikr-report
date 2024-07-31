@@ -1,3 +1,10 @@
+hamonikr-report (2.1.0) unstable; urgency=medium
+
+  * Release for ubuntu 24.04 noble
+   - Add hamonikr-upgrade-info dependency
+
+ -- HamoniKR <pkg@hamonikr.org>  Wed, 31 Jul 2024 16:10:28 +0900
+
 hamonikr-report (2.0.1) stable; urgency=medium
 
   * Add conflict, replace

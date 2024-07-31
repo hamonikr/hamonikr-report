@@ -61,7 +61,8 @@ class Report(InfoReport):
 
     def callback(self, data):
         # real command : /usr/lib/linuxmint/mintUpdate/rel_upgrade.py
-        subprocess.run(["/usr/bin/mint-release-upgrade"])
+        # subprocess.run(["/usr/bin/mint-release-upgrade"])
+        subprocess.run(['gnome-terminal', '--', 'zsh', '-c', 'sudo /usr/local/bin/do-upgrade; exec zsh'])
         
         # To upgrade the Harmonica OS to the next version
         # First, run Linux Mint's release upgrade 
