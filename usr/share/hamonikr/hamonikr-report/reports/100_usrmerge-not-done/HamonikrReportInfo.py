@@ -3,9 +3,8 @@ import os
 from pathlib import Path
 import webbrowser
 
-import lsb_release
-
 from hamonikrreport import InfoReport, InfoReportAction
+
 
 class Report(InfoReport):
 
@@ -18,15 +17,6 @@ class Report(InfoReport):
         self.has_ignore_button = True
 
     def is_pertinent(self):
-        try:
-            info = lsb_release.get_os_release()
-
-            major_version = info["RELEASE"].split(".")[0]
-            if int(major_version) < 6 :
-                return False
-        except:
-            return False
-
         # from convert-usrmerge script
         directories = ["bin", "sbin", "lib", "libx32", "lib64", "lib32"]
 
@@ -48,7 +38,7 @@ class Report(InfoReport):
         # Return the descriptions
         descriptions = []
         descriptions.append(_("We recommend you convert your system with usrmerge."))
-        descriptions.append(_("This is done already for new installations of HamoniKR OS."))
+        descriptions.append(_("This is done already for new installations of Linux Mint."))
         descriptions.append(_("To convert your system, open a terminal and type:"))
         descriptions.append("\n<span font_family='monospace'>apt install usrmerge</span>\n")
         descriptions.append(_("You should reboot the computer once this completes."))

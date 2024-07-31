@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import gi
-import imp
+import importlib
 import os
 import sys
 import threading
@@ -32,7 +32,7 @@ class InfoReportContainer():
         self.path = path
         sys.path.insert(0, path)
         import HamonikrReportInfo
-        imp.reload(HamonikrReportInfo)
+        importlib.reload(HamonikrReportInfo)
         self.instance = HamonikrReportInfo.Report()
         sys.path.remove(path)
 

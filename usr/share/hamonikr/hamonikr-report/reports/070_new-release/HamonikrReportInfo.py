@@ -33,15 +33,30 @@ class Report(InfoReport):
                     if "CODENAME=" in line:
                         rel_codename = line.split('=')[1].replace('"', '').split()[0]
                     if "RELEASE=" in line:
-                        rel_release = line.split('=')[1].replace('"', '').split()[0]                        
+                        rel_release = line.split('=')[1].replace('"', '').split()[0]
+        
+        # Debugging output
+        print(f"rel_edition: {rel_edition}")
+        print(f"rel_codename: {rel_codename}")
+        print(f"rel_release: {rel_release}")
+                                                        
         # When there is a new version of the code name
         if rel_edition is not None and rel_codename is not None:
             rel_path = "/usr/share/hamonikr-upgrade-info/%s/info" % rel_codename
             if os.path.exists(rel_path):
                 config = configparser.ConfigParser()
                 config.read(rel_path)
+
+                # Debugging output
+                print(f"Current release: {rel_release}")
+                print(f"Target release: {config['general']['release']}")                
+                
                 if rel_release < config['general']['release']:
                     self.rel_target = config['general']['target_name']
+
+                    # Debugging output
+                    print(f"New release available: {self.rel_target}")
+                    
                     return True                
         return False
 
