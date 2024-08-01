@@ -1,3 +1,10 @@
+hamonikr-report (2.1.1) unstable; urgency=medium
+
+  * Release for HamoniKR 8
+   - No changes
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 01 Aug 2024 12:56:47 +0900
+
 hamonikr-report (2.1.0) unstable; urgency=medium
 
   * Release for ubuntu 24.04 noble
