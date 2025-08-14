@@ -1,3 +1,12 @@
+hamonikr-report (2.2.1) stable; urgency=medium
+
+  * Release v2.2.1
+  *   * Add release script for automated versioning and changelog
+    updates
+  *   * Add security check feature to Hamonikr Report
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 14 Aug 2025 12:09:34 +0900
+
 hamonikr-report (2.2.0) stable; urgency=medium
 
   * Add Security check for HamoniKR OS
