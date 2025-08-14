@@ -419,6 +419,167 @@ msgstr "하드웨어 드라이버를 사용할 수 있는 장비들:"
 msgid "Launch the Driver Manager"
 msgstr "드라이버 매니저 실행하기"
 
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:17
+msgid "Security Status Check"
+msgstr "보안 상태 점검"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:40
+msgid "Firewall is active"
+msgstr "방화벽이 활성화되어 있습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:43
+msgid "Firewall is disabled"
+msgstr "방화벽이 비활성화되어 있습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:46
+msgid "Could not determine firewall status"
+msgstr "방화벽 상태를 확인할 수 없습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:49
+msgid "UFW firewall not installed"
+msgstr "UFW 방화벽이 설치되지 않았습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:56
+msgid "Linux Mint Update Manager is installed"
+msgstr "리눅스 민트 업데이트 매니저가 설치되어 있습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:64
+msgid "Automatic update checking is enabled"
+msgstr "자동 업데이트 확인이 활성화되어 있습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:66
+msgid "Consider enabling automatic update checking"
+msgstr "자동 업데이트 확인 활성화를 고려해보세요"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:71
+msgid "Linux Mint Update Manager not found"
+msgstr "리눅스 민트 업데이트 매니저를 찾을 수 없습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:74
+msgid "Could not check update manager configuration"
+msgstr "업데이트 매니저 설정을 확인할 수 없습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:78
+msgid "SSH service is not running"
+msgstr "SSH 서비스가 실행되지 않고 있습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:86
+msgid "SSH root login is enabled"
+msgstr "SSH root 로그인이 활성화되어 있습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:88
+msgid "SSH password authentication is enabled without key authentication"
+msgstr "키 인증 없이 SSH 패스워드 인증이 활성화되어 있습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:94
+msgid "SSH service has secure configuration"
+msgstr "SSH 서비스가 안전하게 설정되어 있습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:97
+msgid "SSH configuration file not found"
+msgstr "SSH 설정 파일을 찾을 수 없습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:100
+msgid "Could not check SSH security"
+msgstr "SSH 보안을 확인할 수 없습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:109
+#, python-format
+msgid "Multiple users have sudo privileges: %s"
+msgstr "여러 사용자가 sudo 권한을 가지고 있습니다: %s"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:111
+msgid "Sudo privileges are properly limited"
+msgstr "Sudo 권한이 적절히 제한되어 있습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:113
+msgid "No users have sudo privileges"
+msgstr "sudo 권한을 가진 사용자가 없습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:116
+msgid "Could not check sudo users"
+msgstr "sudo 사용자를 확인할 수 없습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:132
+msgid "Uncomplicated Firewall (UFW)"
+msgstr "간편 방화벽 (UFW)"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:133
+msgid "AhnLab V3 Lite Antivirus"
+msgstr "안랩 V3 Lite 백신"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:134
+msgid "Firewall configuration tool"
+msgstr "방화벽 설정 도구 (GUFW)"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:135
+msgid "Linux Mint Update Manager"
+msgstr "리눅스 민트 업데이트 매니저"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:140
+#, python-format
+msgid "Installed: %s"
+msgstr "설치됨: %s"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:143
+#, python-format
+msgid "Security packages not installed: %s"
+msgstr "보안 패키지가 설치되지 않음: %s"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:159
+#, python-format
+msgid "File permission issue: %s"
+msgstr "파일 권한 문제: %s"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:162
+msgid "Critical system file permissions are correct"
+msgstr "중요 시스템 파일 권한이 올바릅니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:179
+#, python-format
+msgid "Many network services are running (ports: %s)"
+msgstr "많은 네트워크 서비스가 실행 중입니다 (포트: %s)"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:181
+msgid "Network services are limited"
+msgstr "네트워크 서비스가 제한되어 있습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:183
+msgid "No unnecessary network services detected"
+msgstr "불필요한 네트워크 서비스가 탐지되지 않았습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:186
+msgid "Could not check open ports"
+msgstr "열린 포트를 확인할 수 없습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:196
+msgid "System security status check completed."
+msgstr "시스템 보안 상태 점검이 완료되었습니다."
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:200
+msgid "<b>⚠ Security Issues Found:</b>"
+msgstr "<b>⚠ 보안 문제 발견:</b>"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:206
+msgid "<b>⚠ Security Warnings:</b>"
+msgstr "<b>⚠ 보안 경고:</b>"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:212
+msgid "<b>✓ Security Status OK:</b>"
+msgstr "<b>✓ 보안 상태 양호:</b>"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:220
+msgid "Refresh Security Check"
+msgstr "보안 점검 새로고침"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:226
+msgid "Enable Firewall"
+msgstr "방화벽 활성화"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:230
+msgid "Install Security Packages"
+msgstr "보안 패키지 설치"
+
 #~ msgid "Add the XApp Status applet"
 #~ msgstr "XApp 상태 애플릿 추가"
 

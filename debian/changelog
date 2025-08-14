@@ -1,3 +1,9 @@
+hamonikr-report (2.2.0) stable; urgency=medium
+
+  * Add Security check for HamoniKR OS
+
+ -- HamoniKR <pkg@hamonikr.org>  Thu, 14 Aug 2025 10:16:32 +0900
+
 hamonikr-report (2.1.2) unstable; urgency=medium
 
   * Update libavcodec-extra60
