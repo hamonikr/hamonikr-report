@@ -423,9 +423,13 @@ msgstr "드라이버 매니저 실행하기"
 msgid "Security Status Check"
 msgstr "보안 상태 점검"
 
-#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:40
-msgid "Firewall is active"
-msgstr "방화벽이 활성화되어 있습니다"
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:49
+msgid "Firewall is active with custom rules configured"
+msgstr "방화벽이 활성화되어 있고 사용자 정의 규칙이 설정되어 있습니다"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:51
+msgid "Firewall is active with secure default policy (deny incoming)"
+msgstr "방화벽이 활성화되어 있고 안전한 기본 정책이 적용되어 있습니다 (외부 접속 차단)"
 
 #: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:43
 msgid "Firewall is disabled"
@@ -552,6 +556,16 @@ msgstr "불필요한 네트워크 서비스가 탐지되지 않았습니다"
 msgid "Could not check open ports"
 msgstr "열린 포트를 확인할 수 없습니다"
 
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:229
+#, python-format
+msgid "Network services are running but protected by firewall (ports: %s)"
+msgstr "네트워크 서비스가 실행 중이지만 방화벽으로 보호되고 있습니다 (포트: %s)"
+
+#: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:231
+#, python-format
+msgid "Many network services are running without adequate firewall protection (ports: %s)"
+msgstr "적절한 방화벽 보호 없이 많은 네트워크 서비스가 실행 중입니다 (포트: %s)"
+
 #: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:196
 msgid "System security status check completed."
 msgstr "시스템 보안 상태 점검이 완료되었습니다."
@@ -579,6 +593,39 @@ msgstr "방화벽 활성화"
 #: usr/share/hamonikr/hamonikrreport/reports/300_security-check/HamonikrReportInfo.py:230
 msgid "Install Security Packages"
 msgstr "보안 패키지 설치"
+
+#: usr/lib/hamonikr/hamonikrreport/tray.py:134
+msgid "Critical security issues detected!"
+msgstr "심각한 보안 문제가 발견되었습니다!"
+
+#: usr/lib/hamonikr/hamonikrreport/tray.py:137
+msgid "Security warnings found - please review"
+msgstr "보안 경고 발견 - 검토가 필요합니다"
+
+#: usr/lib/hamonikr/hamonikrreport/tray.py:140
+msgid "Security status is good"
+msgstr "보안 상태가 양호합니다"
+
+#: usr/lib/hamonikr/hamonikrreport/tray.py:157
+msgid "Other system reports also require attention"
+msgstr "다른 시스템 보고서도 주의가 필요합니다"
+
+#: usr/share/hamonikr/hamonikrreport/hamonikrreport.ui.h:21
+msgid "Running security checks..."
+msgstr "보안 점검 실행 중..."
+
+#: usr/share/hamonikr/hamonikrreport/hamonikrreport.ui.h:22
+msgid "Security Check"
+msgstr "보안 점검"
+
+#: usr/share/hamonikr/hamonikrreport/app.py:999
+msgid "Failed to load security check"
+msgstr "보안 점검을 불러올 수 없습니다"
+
+#: usr/share/hamonikr/hamonikrreport/app.py:1000
+#, python-format
+msgid "Failed to load security check: %s"
+msgstr "보안 점검을 불러올 수 없습니다: %s"
 
 #~ msgid "Add the XApp Status applet"
 #~ msgstr "XApp 상태 애플릿 추가"

@@ -185,6 +185,15 @@ class HamonikrReportWindow():
 
         self.load_info()
 
+        # Initialize security check UI
+        self.security_button_box = self.builder.get_object("security_button_box")
+        self.security_descriptions_box = self.builder.get_object("security_descriptions_box")
+        self.security_stack = self.builder.get_object("security_stack")
+        self.security_spinner = self.builder.get_object("security_spinner")
+        
+        # Load security check
+        self.load_security_check()
+
         accel_group = Gtk.AccelGroup()
         self.window.add_accel_group(accel_group)
 
@@ -272,6 +281,7 @@ class HamonikrReportWindow():
         self.load_info()
         self.load_sysinfo()
         self.load_crashes()
+        self.load_security_check()
 
     def on_menu_quit(self, widget):
         self.application.quit()
@@ -575,6 +585,168 @@ class HamonikrReportWindow():
         output = output.split()[0] # if we have more than one URL, only use the first one
         pastebin.wait()
         subprocess.call(['xdg-open', output])
+
+    @idle
+    def show_security_spinner(self):
+        self.security_stack.set_visible_child_name("page_spinner")
+        self.security_spinner.start()
+
+    @idle
+    def show_security_results(self):
+        self.security_stack.set_visible_child_name("page_results")
+        self.security_spinner.stop()
+
+    @_async
+    def load_security_check(self):
+        self.show_security_spinner()
+        
+        try:
+            from security_check import SecurityChecker
+            from hamonikrreport import InfoReportAction
+            
+            # Create security checker instance
+            self.security_checker = SecurityChecker()
+            
+            # Get security check results  
+            status = self.security_checker.get_security_status()
+            descriptions = self.security_checker.get_descriptions()
+            
+            # Create actions
+            actions = []
+            # Refresh action
+            action = InfoReportAction(label=_("Refresh Security Check"), callback=self.callback_refresh_security)
+            actions.append(action)
+            
+            # Enable firewall action (if firewall is inactive)
+            firewall_status = subprocess.getoutput("ufw status")
+            if "Status: inactive" in firewall_status:
+                action = InfoReportAction(label=_("Enable Firewall"), callback=self.callback_enable_firewall)
+                action.set_style(Gtk.STYLE_CLASS_SUGGESTED_ACTION)
+                actions.append(action)
+            
+            # Install security packages action (only show if there are security issues or warnings)
+            if status in ["RED", "YELLOW"]:
+                action = InfoReportAction(label=_("Install Security Packages"), callback=self.callback_install_security_packages)
+                if status == "RED":
+                    action.set_style(Gtk.STYLE_CLASS_DESTRUCTIVE_ACTION)
+                actions.append(action)
+            
+            # Update UI with results
+            self.update_security_ui(descriptions, actions, status)
+            
+        except Exception as e:
+            print(f"Failed to load security check: {e}")
+            import traceback
+            traceback.print_exc()
+            self.update_security_ui([_("Failed to load security check: %s") % str(e)], [], "RED")
+        
+        self.show_security_results()
+
+
+
+    @idle
+    def update_security_ui(self, descriptions, actions, status):
+        # Set icon based on security status
+        if status == "RED":
+            icon_name = "hamonikr-report-security-critical"
+        elif status == "YELLOW":
+            icon_name = "hamonikr-report-security-warning"
+        else:
+            icon_name = "hamonikr-report-security-good"
+        
+        self.builder.get_object("security_icon_image").set_from_icon_name(icon_name, Gtk.IconSize.DIALOG)
+        
+        # Clear and update descriptions with icons
+        for child in self.security_descriptions_box.get_children():
+            self.security_descriptions_box.remove(child)
+        
+        for description in descriptions:
+            # Create horizontal box for icon + text
+            hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
+            
+            # Determine icon based on content
+            if "Security Issues Found" in description or "⚠" in description:
+                icon = Gtk.Image.new_from_icon_name("hamonikr-report-security-critical", Gtk.IconSize.SMALL_TOOLBAR)
+            elif "Security Warnings" in description or "warning" in description.lower():
+                icon = Gtk.Image.new_from_icon_name("hamonikr-report-security-warning", Gtk.IconSize.SMALL_TOOLBAR)
+            elif "Security Status OK" in description or "✓" in description:
+                icon = Gtk.Image.new_from_icon_name("hamonikr-report-security-good", Gtk.IconSize.SMALL_TOOLBAR)
+            elif description.startswith("• "):
+                # Individual items - determine icon based on parent category
+                if hasattr(self, '_current_category'):
+                    if self._current_category == "issues":
+                        icon = Gtk.Image.new_from_icon_name("dialog-error", Gtk.IconSize.MENU)
+                    elif self._current_category == "warnings":
+                        icon = Gtk.Image.new_from_icon_name("dialog-warning", Gtk.IconSize.MENU)
+                    else:
+                        icon = Gtk.Image.new_from_icon_name("emblem-ok-symbolic", Gtk.IconSize.MENU)
+                else:
+                    icon = None
+            else:
+                icon = None
+            
+            # Set current category for next items
+            if "Security Issues Found" in description:
+                self._current_category = "issues"
+            elif "Security Warnings" in description:
+                self._current_category = "warnings"
+            elif "Security Status OK" in description:
+                self._current_category = "ok"
+            
+            # Add icon if available
+            if icon:
+                hbox.pack_start(icon, False, False, 0)
+            
+            # Create and add label
+            label = Gtk.Label(label=description)
+            label.set_use_markup(True)
+            label.set_line_wrap(True)
+            label.set_xalign(0)  # Left align
+            hbox.pack_start(label, True, True, 0)
+            
+            self.security_descriptions_box.add(hbox)
+        
+        # Clear and update action buttons
+        for child in self.security_button_box.get_children():
+            self.security_button_box.remove(child)
+        
+        for action in actions:
+            button = Gtk.Button(label=action.label)
+            button.connect("clicked", self.on_security_action_clicked, action.callback, action.data)
+            if hasattr(action, 'style') and action.style is not None:
+                button.get_style_context().add_class(action.style)
+            self.security_button_box.add(button)
+        
+        self.builder.get_object("security_box").show_all()
+
+    def on_security_action_clicked(self, button, callback, data):
+        self.window.set_sensitive(False)
+        reload_requested = callback(data)
+        if reload_requested:
+            self.load_security_check()
+        self.window.set_sensitive(True)
+
+    def callback_refresh_security(self, data):
+        # 새로고침 - 단순히 True를 반환하여 리로드 요청
+        return True
+
+    def callback_enable_firewall(self, data):
+        try:
+            # UFW 활성화
+            subprocess.run(['pkexec', 'ufw', 'enable'], check=True)
+            return True
+        except Exception as e:
+            print(f"Failed to enable firewall: {e}")
+            return False
+
+    def callback_install_security_packages(self, data):
+        try:
+            # 보안 패키지 설치 (사용자가 선택할 수 있도록 소프트웨어 매니저 열기)
+            subprocess.Popen(['mintinstall'])
+            return False  # 설치 후 수동으로 새로고침하도록
+        except Exception as e:
+            print(f"Failed to open software manager: {e}")
+            return False
 
 if __name__ == "__main__":
     application = MyApplication("com.hamonikr.reports", Gio.ApplicationFlags.FLAGS_NONE)

@@ -1,40 +1,43 @@
+#!/usr/bin/env python3
+
+import subprocess
 import os
 import gettext
-import gi
-import subprocess
+# GTK imports will be handled by importing modules
 
-gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk
+# Translation setup  
+_ = gettext.gettext
 
-from hamonikrreport import InfoReport, InfoReportAction
-
-class Report(InfoReport):
-
+class SecurityChecker:
     def __init__(self):
-
-        gettext.install("hamonikr-report", "/usr/share/locale", names="ngettext")
-
-        self.title = _("Security Status Check")
-        self.icon = "security-medium-symbolic"
-        self.has_ignore_button = True
-        
-        # 보안 점검 결과를 저장할 변수들
         self.security_issues = []
         self.security_warnings = []
         self.security_ok = []
 
-    def is_pertinent(self):
-        # 항상 보안 점검을 표시 (시스템 관리자가 정기적으로 확인할 수 있도록)
-        return True
-
     def check_firewall_status(self):
         """방화벽 상태 점검"""
         try:
-            result = subprocess.getoutput("ufw status")
-            if "Status: active" in result:
-                self.security_ok.append(_("Firewall is active"))
+            result = subprocess.getoutput("sudo ufw status verbose")
+            if "활성" in result or "Status: active" in result:
+                # 방화벽이 활성화되어 있으면 기본적으로 안전함
+                # UFW는 기본 정책이 incoming deny이므로 규칙이 없어도 안전
+                lines = result.split('\n')
+                has_custom_rules = False
+                
+                # 사용자 정의 규칙이 있는지 확인 (To, Action, From 형태의 규칙)
+                for line in lines:
+                    if line.strip() and ('ALLOW' in line.upper() or 'DENY' in line.upper() or 'REJECT' in line.upper()):
+                        # 기본 정책 라인이 아닌 실제 규칙인지 확인
+                        if not any(keyword in line for keyword in ['기본 설정:', 'Default:', '내부로 들어옴', 'incoming', '외부로 나감', 'outgoing']):
+                            has_custom_rules = True
+                            break
+                
+                if has_custom_rules:
+                    self.security_ok.append(_("Firewall is active with custom rules configured"))
+                else:
+                    self.security_ok.append(_("Firewall is active with secure default policy (deny incoming)"))
                 return True
-            elif "Status: inactive" in result:
+            elif "비활성" in result or "Status: inactive" in result:
                 self.security_issues.append(_("Firewall is disabled"))
                 return False
             else:
@@ -201,10 +204,18 @@ class Report(InfoReport):
                             if port not in ['22', '53']:  # SSH와 DNS는 일반적으로 허용
                                 listening_ports.append(port)
             
+            # 방화벽 상태 확인
+            firewall_result = subprocess.getoutput("sudo ufw status verbose")
+            firewall_active = "활성" in firewall_result or "Status: active" in firewall_result
+            firewall_deny_incoming = "deny (내부로 들어옴)" in firewall_result or "deny (incoming)" in firewall_result
+            
             if listening_ports:
                 unique_ports = list(set(listening_ports))
-                if len(unique_ports) > 5:  # 5개 이상의 포트가 열려있으면 경고
-                    self.security_warnings.append(_("Many network services are running (ports: %s)") % ", ".join(unique_ports[:10]))
+                if firewall_active and firewall_deny_incoming:
+                    # 방화벽이 활성이고 기본 정책이 deny incoming이면 안전
+                    self.security_ok.append(_("Network services are running but protected by firewall (ports: %s)") % ", ".join(unique_ports[:10]))
+                elif len(unique_ports) > 5:  # 방화벽이 없거나 설정이 안전하지 않을 때만 경고
+                    self.security_warnings.append(_("Many network services are running without adequate firewall protection (ports: %s)") % ", ".join(unique_ports[:10]))
                 else:
                     self.security_ok.append(_("Network services are limited"))
             else:
@@ -215,7 +226,8 @@ class Report(InfoReport):
             self.security_warnings.append(_("Could not check open ports"))
             return None
 
-    def get_descriptions(self):
+    def get_security_status(self):
+        """보안 상태 평가 (GREEN/YELLOW/RED)"""
         # 보안 점검 실행
         self.security_issues.clear()
         self.security_warnings.clear()
@@ -229,6 +241,16 @@ class Report(InfoReport):
         self.check_file_permissions()
         self.check_open_ports()
         
+        # 상태 결정 로직
+        if self.security_issues:
+            return "RED"  # 심각한 보안 문제 발견
+        elif self.security_warnings:
+            return "YELLOW"  # 경고 사항 존재
+        else:
+            return "GREEN"  # 모든 것이 양호
+
+    def get_descriptions(self):
+        """보안 점검 결과 설명 반환"""
         descriptions = []
         descriptions.append(_("System security status check completed."))
         descriptions.append("")
@@ -251,50 +273,3 @@ class Report(InfoReport):
                 descriptions.append(f"• {ok_item}")
         
         return descriptions
-
-    def get_actions(self):
-        actions = []
-        
-        # 새로고침 액션
-        action = InfoReportAction(label=_("Refresh Security Check"), callback=self.callback_refresh)
-        actions.append(action)
-        
-        # 방화벽 활성화 액션 (방화벽이 비활성화된 경우)
-        firewall_status = subprocess.getoutput("ufw status")
-        if "Status: inactive" in firewall_status:
-            action = InfoReportAction(label=_("Enable Firewall"), callback=self.callback_enable_firewall)
-            action.set_style(Gtk.STYLE_CLASS_SUGGESTED_ACTION)
-            actions.append(action)
-        
-        # 보안 패키지 설치 액션
-        action = InfoReportAction(label=_("Install Security Packages"), callback=self.callback_install_security_packages)
-        actions.append(action)
-        
-        return actions
-
-    def callback_refresh(self, data):
-        # 새로고침 - 단순히 True를 반환하여 리로드 요청
-        return True
-
-    def callback_enable_firewall(self, data):
-        try:
-            # UFW 활성화
-            subprocess.run(['pkexec', 'ufw', 'enable'], check=True)
-            return True  # 성공시 리로드
-        except subprocess.CalledProcessError:
-            return False  # 실패시 리로드하지 않음
-        except:
-            return False
-
-    def callback_install_security_packages(self, data):
-        # 데스크톱 환경에 적합한 기본 보안 패키지들 설치
-        packages = ['ufw', 'gufw']
-        try:
-            self.install_packages(packages)
-            return True
-        except:
-            return False
-
-if __name__ == "__main__":
-    report = Report()
-    print(report.is_pertinent())

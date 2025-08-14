@@ -97,6 +97,16 @@ class MyApplication(Gtk.Application):
 
     def load_info(self):
         found_pertinent_report = False
+        security_status = "GREEN"  # 기본값: 양호 상태
+        
+        # 보안 점검 상태 확인
+        try:
+            from security_check import SecurityChecker
+            security_checker = SecurityChecker()
+            security_status = security_checker.get_security_status()
+        except Exception as e:
+            print(f"Failed to check security status: {e}")
+        
         if os.path.exists(INFO_DIR):
             ignored_paths = self.settings.get_strv("ignored-reports")
             for dir_name in sorted(os.listdir(INFO_DIR)):
@@ -107,14 +117,44 @@ class MyApplication(Gtk.Application):
                         report = InfoReportContainer(uuid, path)
                         if report.instance.is_pertinent():
                             found_pertinent_report = True
-                            break
                     except Exception as e:
-                        print("Failed to load report %s: \n%s\n" % (dir_name, e))
+                        print("Failed to load report %s: 
+%s
+" % (dir_name, e))
 
+        # 아이콘 및 툴팁 설정
         if found_pertinent_report:
             self.status_icon.set_visible(True)
-            self.status_icon.set_icon_name("hamonikr-report-symbolic")
-            self.status_icon.set_tooltip_text(_("Some system reports require your attention"))
+            
+            # 보안 상태에 따른 아이콘 설정
+            if security_status == "RED":
+                self.status_icon.set_icon_name("hamonikr-report-security-critical")
+                tooltip_text = _("Critical security issues detected!")
+            elif security_status == "YELLOW":
+                self.status_icon.set_icon_name("hamonikr-report-security-warning")
+                tooltip_text = _("Security warnings found - please review")
+            else:
+                self.status_icon.set_icon_name("hamonikr-report-security-good")
+                tooltip_text = _("Security status is good")
+            
+            # 다른 보고서가 있는 경우 기본 메시지 추가
+            other_reports_exist = False
+            for dir_name in sorted(os.listdir(INFO_DIR)):
+                path = os.path.join(INFO_DIR, dir_name)
+                uuid = dir_name.split("_")[-1]
+                if uuid not in ignored_paths:
+                    try:
+                        report = InfoReportContainer(uuid, path)
+                        if report.instance.is_pertinent():
+                            other_reports_exist = True
+                            break
+                    except:
+                        pass
+            
+            if other_reports_exist:
+                tooltip_text += " - " + _("Other system reports also require attention")
+            
+            self.status_icon.set_tooltip_text(tooltip_text)
         else:
             self.status_icon.set_visible(False)
 
